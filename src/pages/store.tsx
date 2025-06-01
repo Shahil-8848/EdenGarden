@@ -1,4 +1,3 @@
-import React from "react";
 import "./Blogs.css";
 import Krishna from "../MyComponents/Krishna2.jpg";
 const Blogs = () => {

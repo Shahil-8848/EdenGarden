@@ -121,7 +121,7 @@ const HomePage = () => {
 
   // Primary color value to use directly in styles
   const primaryColor = "#008754";
-  const primaryHoverColor = "#006f44";
+  // const primaryHoverColor = "#006f44";
 
   return (
     <div className="min-h-screen w-full bg-gray-50">
@@ -356,11 +356,8 @@ const HomePage = () => {
                   style={{
                     borderColor: primaryColor,
                     color: primaryColor,
-                    "&:hover": {
-                      backgroundColor: primaryColor,
-                      color: "white",
-                    },
                   }}
+                  className="hover:bg-[#008754] hover:text-white"
                 >
                   Learn More
                 </Button>
@@ -609,8 +606,8 @@ const HomePage = () => {
                 style={{
                   borderColor: primaryColor,
                   color: primaryColor,
-                  "&:hover": { backgroundColor: primaryColor, color: "white" },
                 }}
+                className="hover:bg-[#008754] hover:text-white"
               >
                 View All Events
               </Button>

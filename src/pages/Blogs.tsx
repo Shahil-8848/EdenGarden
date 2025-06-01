@@ -371,7 +371,7 @@ const FeaturedBlogCard: React.FC<{
   post: BlogPost;
   reversed?: boolean;
   index: number;
-}> = ({ post, reversed = false, index }) => {
+}> = ({ post, reversed = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -688,7 +688,7 @@ const Blog: React.FC = () => {
 
     const ctx = gsap.context(() => {
       // Animate featured blog images
-      gsap.utils.toArray(".featured-image").forEach((image: any, index) => {
+      (gsap.utils.toArray(".featured-image") as Element[]).forEach((image) => {
         gsap.fromTo(
           image,
           {
@@ -711,26 +711,28 @@ const Blog: React.FC = () => {
       });
 
       // Animate content sections
-      gsap.utils.toArray(".content-section").forEach((section: any) => {
-        gsap.fromTo(
-          section,
-          {
-            y: 50,
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 85%",
-              end: "bottom 15%",
+      (gsap.utils.toArray(".content-section") as HTMLElement[]).forEach(
+        (section) => {
+          gsap.fromTo(
+            section,
+            {
+              y: 50,
+              opacity: 0,
             },
-          }
-        );
-      });
+            {
+              y: 0,
+              opacity: 1,
+              duration: 1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: section,
+                start: "top 85%",
+                end: "bottom 15%",
+              },
+            }
+          );
+        }
+      );
     }, containerRef);
 
     return () => ctx.revert();
