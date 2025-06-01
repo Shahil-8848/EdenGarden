@@ -17,7 +17,9 @@ import WhyUs from "../MyComponents/WhyUs";
 import { Link } from "react-router-dom";
 import EventSlider from "@/MyComponents/EventSlider";
 import PrincipalMessage from "@/MyComponents/MsgFromPrincipal";
-
+import HouseCap7 from "../../public/SchoolPics/HouseCap7.jpg";
+import votecl from "../../public/SchoolPics/votecl-8.jpg";
+import kidsBanner from "../../public/SchoolPics/kidsGroup.jpg";
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,8 +36,9 @@ const HomePage = () => {
   const bannerImages = [
     "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/494627999_1163956128862495_6777657293295228081_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9r90JNnxiMMQ7kNvwFvjst0&_nc_oc=Adl9mK2Bv5ElDfb2fGlHcK83XFaVoHkvAGDa8eoUL2UDg0Wv0E2HFN2TzJr_hAbS4feL6ZWQizPSPVzrM6Lhl4RL&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=qhOmtzqckReyYYISrrCaFA&oh=00_AfKt3h8OFlKmJUwTZixNAgJ3tBO3FeDAgG1x8dta1bSQig&oe=6840B2BF",
     "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/499701828_1171916121399829_1048416657670283510_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Tzp92pX3gO4Q7kNvwGSdtdL&_nc_oc=AdnZLChCbTIEUyOMgWSqJGdCAHCNWDeYyeEoD-gaNnZG3IyAi5swVk_pGpNAz4DJP5T_vQrg_NCLf7H1luyqhse9&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=bMKL1hKCq9hIwaNF6X5Xng&oh=00_AfK_4C868EoZLfATPQ6oieptvRBJ36oMtcRAPSwI-ZSCCg&oe=6840A693",
-    "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/484290723_1121760143082094_2552161464950838033_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JhrHrtd4bkUQ7kNvwExfyW4&_nc_oc=Adk8d4DfmP4hmvA97CjS_kJIxOrkA_5VWsuOAiWODSKMJb7kCGfByY7F5adO9gl2jhSQC-85HLrdrsWy5qzSVAvs&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=nKBzEyoaGrhXWj090AlYjQ&oh=00_AfK7UhG-Lq22o6UO6mhjaUzlK0e6V2x8FGxVg3RInTJT3g&oe=68295178",
-    "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/481121278_1111824904075618_5864908203893587589_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KPIYahTk5l4Q7kNvwH5GstR&_nc_oc=Adm0zHEBNfKHw3B1Dtajl7UKmBXzs1nC2h4VOPfF89KtNA7896j7hZ1GdFLLoNECyncYGZhzXidic3Gv9zerT_3W&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=bvz0-bFTxY97hafX4cjyHA&oh=00_AfITl0EKYuldkHhskVLZYrfZXWOB-beLQcix78HXQRkpAw&oe=68294F4B",
+    kidsBanner,
+
+    votecl,
   ];
 
   // Function to navigate to next slide
@@ -265,7 +268,7 @@ const HomePage = () => {
         {/* Hero Banner Section with Auto-sliding */}
         <section ref={bannerRef} className="py-3">
           <div className="w-full max-w-[1400px] mx-auto px-2 sm:px-4">
-            <div className="relative rounded-lg overflow-hidden shadow-md">
+            <div className="relative border border-green-600  rounded-lg overflow-hidden shadow-lg shadow-black">
               <AspectRatio ratio={16 / 5} className="bg-slate-50">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-all duration-500 ease-in-out"
@@ -273,7 +276,7 @@ const HomePage = () => {
                     backgroundImage: `url(${bannerImages[currentSlide]})`,
                   }}
                 >
-                  <div className="absolute inset-0 bg-black/30"></div>
+                  <div className="absolute inset-0 bg-green/30"></div>
                 </div>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
                   <h2 className="text-4xl md:text-5xl font-bold mb-4">
