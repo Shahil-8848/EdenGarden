@@ -171,6 +171,7 @@ const PrincipalMessage: React.FC = () => {
 
   useEffect(() => {
     if (!containerRef.current) return;
+    console.log(isVisible);
 
     const ctx = gsap.context(() => {
       // Main container animation
@@ -420,7 +421,7 @@ const PrincipalMessage: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0% {
             transform: translateY(0px);

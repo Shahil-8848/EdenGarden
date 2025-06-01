@@ -111,7 +111,7 @@ const schoolEvents: EventItem[] = [
 const CompactEventCard: React.FC<{
   event: EventItem;
   index: number;
-}> = ({ event, index }) => {
+}> = ({ event }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
@@ -330,7 +330,7 @@ const CompactEventCard: React.FC<{
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0% {
             transform: translateY(0px);
@@ -405,7 +405,7 @@ const EventSlider: React.FC = () => {
   // Auto-slide functionality
   useEffect(() => {
     if (isPaused) return;
-
+    console.log(progress);
     let animationFrame: number;
     let startTime: number | null = null;
     const duration = 4000; // 4 seconds
