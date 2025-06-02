@@ -555,26 +555,28 @@ const TeacherCard: React.FC<{ teacher: Teacher; index: number }> = ({
         </div>
       </div>
 
-      <style jsx>{`
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-        .transform-style-preserve-3d {
-          transform-style: preserve-3d;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
+      <style>
+        {`
+          .perspective-1000 {
+            perspective: 1000px;
+          }
+          .transform-style-preserve-3d {
+            transform-style: preserve-3d;
+          }
+          .backface-hidden {
+            backface-visibility: hidden;
+          }
+          .rotate-y-180 {
+            transform: rotateY(180deg);
+          }
+          .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+        `}
+      </style>
     </div>
   );
 };
@@ -612,7 +614,31 @@ const TeachersDirectory: React.FC = () => {
         {/* Header */}
 
         {/* Search and Filter */}
-        <h1 className="text-3xl text-center"> Our Teachers</h1>
+        <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+          <h1 className="text-3xl text-center md:text-left flex-1">
+            Our Teachers
+          </h1>
+          <div className="flex gap-4 w-full md:w-auto">
+            <select
+              className="border border-green-200 rounded-lg px-4 py-2 bg-white text-green-800 focus:outline-none focus:ring-2 focus:ring-green-300"
+              value={selectedDepartment}
+              onChange={(e) => setSelectedDepartment(e.target.value)}
+            >
+              {departments.map((dept) => (
+                <option key={dept} value={dept}>
+                  {dept}
+                </option>
+              ))}
+            </select>
+            <input
+              type="text"
+              className="border border-green-200 rounded-lg px-4 py-2 bg-white text-green-800 focus:outline-none focus:ring-2 focus:ring-green-300"
+              placeholder="Search teachers..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+        </div>
         {/* Teachers Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredTeachers.map((teacher, index) => (
