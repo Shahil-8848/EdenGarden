@@ -291,10 +291,11 @@ const HomePage = () => {
                   style={{ backgroundColor: primaryColor }}
                 ></div>
                 <p className="text-gray-600 mb-4">
-                  Eden Garden Education Foundation was established in 1995 with
-                  a vision to provide quality education to all students. We are
-                  committed to nurturing young minds and helping them grow into
-                  responsible citizens who can contribute positively to society.
+                  Eden Garden Education Foundation was established in 2045 BS
+                  with a vision to provide quality education to all students. We
+                  are committed to nurturing young minds and helping them grow
+                  into responsible citizens who can contribute positively to
+                  society.
                 </p>
                 <p className="text-gray-600 mb-4">
                   Our school offers a comprehensive curriculum that balances
