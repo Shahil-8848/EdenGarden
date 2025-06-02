@@ -4,7 +4,7 @@ import type React from "react";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import demo from "../SchoolPics/demo.jpg";
 // Register GSAP plugin
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -32,11 +32,11 @@ interface Teacher {
 const teachersData: Teacher[] = [
   {
     id: "1",
-    name: "Dr. Emily Rodriguez",
+    name: "Khemraj Sharma Acharya",
     title: "Head of Mathematics Department",
-    department: "Mathematics",
+    department: "English",
     image:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=500&fit=crop&crop=face",
+      "https://scontent.fktm1-1.fna.fbcdn.net/v/t39.30808-1/481240399_592520140281400_3142594933312340788_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_ohc=rYIUrkKP9tQQ7kNvwFpu7jh&_nc_oc=AdmSiS48YjJFwuUg5ltzDyK7z_z4rRJYvrA_rvi89RIi3y7UwNTi6LCGb-AGwTeiKUg&_nc_zt=24&_nc_ht=scontent.fktm1-1.fna&_nc_gid=1zd1EubV831R6FNm10Vh0w&oh=00_AfKWgHKX34bOffu03XPLPSVt7slFYXxPxFXbVa4EsQ8ekQ&oe=6842BF9C",
     email: "e.rodriguez@school.edu",
     phone: "+1 (555) 123-4567",
     education: [
@@ -50,17 +50,16 @@ const teachersData: Teacher[] = [
       "Published 12 research papers",
       "National Math Excellence Award",
     ],
-    bio: "Dr. Rodriguez brings passion and innovation to mathematics education, making complex concepts accessible to all students.",
+    bio: "Dr. Rodriguez brings passion and innovation to mathematics education, making complex concepts accessible to all students through interactive learning methods and real-world applications.",
     officeHours: "Mon-Fri: 2:00 PM - 4:00 PM",
     subjects: ["Calculus", "Statistics", "Algebra II"],
   },
   {
     id: "2",
-    name: "Prof. Michael Chen",
+    name: "Madan Dhungana",
     title: "Senior Science Teacher",
     department: "Science",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
+    image: demo,
     email: "m.chen@school.edu",
     phone: "+1 (555) 234-5678",
     education: [
@@ -78,17 +77,16 @@ const teachersData: Teacher[] = [
       "Green Chemistry Award",
       "Student Mentor Excellence",
     ],
-    bio: "Professor Chen inspires students through hands-on experiments and real-world applications of scientific principles.",
+    bio: "Professor Chen inspires students through hands-on experiments and real-world applications of scientific principles, fostering curiosity and critical thinking in the laboratory.",
     officeHours: "Tue-Thu: 1:30 PM - 3:30 PM",
     subjects: ["Chemistry", "Environmental Science", "AP Chemistry"],
   },
   {
     id: "3",
-    name: "Ms. Sarah Johnson",
+    name: "Gitaram Acharya",
     title: "English Literature Specialist",
     department: "English",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop&crop=face",
+    image: demo,
     email: "s.johnson@school.edu",
     phone: "+1 (555) 345-6789",
     education: [
@@ -106,7 +104,7 @@ const teachersData: Teacher[] = [
       "Literary Magazine Advisor",
       "Writing Competition Judge",
     ],
-    bio: "Ms. Johnson nurtures young writers and helps students discover the power of storytelling and literary analysis.",
+    bio: "Ms. Johnson nurtures young writers and helps students discover the power of storytelling and literary analysis through engaging discussions and creative workshops.",
     officeHours: "Mon, Wed, Fri: 3:00 PM - 5:00 PM",
     subjects: ["English Literature", "Creative Writing", "AP English"],
   },
@@ -115,8 +113,7 @@ const teachersData: Teacher[] = [
     name: "Mr. David Kim",
     title: "Technology Integration Coordinator",
     department: "Technology",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+    image: demo,
     email: "d.kim@school.edu",
     phone: "+1 (555) 456-7890",
     education: [
@@ -130,7 +127,7 @@ const teachersData: Teacher[] = [
       "Tech Innovation Award",
       "Student App Development Mentor",
     ],
-    bio: "Mr. Kim prepares students for the digital future through cutting-edge technology education and programming.",
+    bio: "Mr. Kim prepares students for the digital future through cutting-edge technology education and programming, emphasizing problem-solving and computational thinking.",
     officeHours: "Daily: 12:00 PM - 1:00 PM",
     subjects: ["Computer Science", "Robotics", "Web Development"],
   },
@@ -139,8 +136,7 @@ const teachersData: Teacher[] = [
     name: "Dr. Maria Gonzalez",
     title: "History Department Chair",
     department: "History",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop&crop=face",
+    image: demo,
     email: "m.gonzalez@school.edu",
     phone: "+1 (555) 567-8901",
     education: [
@@ -158,7 +154,7 @@ const teachersData: Teacher[] = [
       "Curriculum Development Leader",
       "International Exchange Coordinator",
     ],
-    bio: "Dr. Gonzalez brings global perspectives to history education, connecting past events to contemporary issues.",
+    bio: "Dr. Gonzalez brings global perspectives to history education, connecting past events to contemporary issues and fostering critical thinking about world cultures.",
     officeHours: "Mon-Wed: 2:30 PM - 4:30 PM",
     subjects: ["World History", "AP History", "Cultural Studies"],
   },
@@ -167,8 +163,7 @@ const teachersData: Teacher[] = [
     name: "Ms. Lisa Thompson",
     title: "Arts & Creative Director",
     department: "Arts",
-    image:
-      "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=500&fit=crop&crop=face",
+    image: demo,
     email: "l.thompson@school.edu",
     phone: "+1 (555) 678-9012",
     education: [
@@ -182,7 +177,7 @@ const teachersData: Teacher[] = [
       "Art Competition Winner",
       "Student Portfolio Mentor",
     ],
-    bio: "Ms. Thompson cultivates artistic expression and creativity, helping students discover their unique artistic voice.",
+    bio: "Ms. Thompson cultivates artistic expression and creativity, helping students discover their unique artistic voice through various mediums and techniques.",
     officeHours: "Tue, Thu: 1:00 PM - 3:00 PM",
     subjects: ["Visual Arts", "Digital Design", "Art History"],
   },
@@ -199,13 +194,14 @@ const departments = [
   "Arts",
 ];
 
-// Teacher Card Component
-const TeacherCard: React.FC<{ teacher: Teacher; index: number }> = ({
+// Simplified Teacher Card Component with Flip Effect
+const SimplifiedTeacherCard: React.FC<{ teacher: Teacher; index: number }> = ({
   teacher,
   index,
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -251,58 +247,53 @@ const TeacherCard: React.FC<{ teacher: Teacher; index: number }> = ({
     setRotation({ x: rotateX, y: rotateY });
   };
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
   const handleMouseLeave = () => {
     setRotation({ x: 0, y: 0 });
+    setIsHovered(false);
   };
 
-  const departmentColors: Record<
-    string,
-    { bg: string; text: string; border: string; gradient: string }
-  > = {
-    Mathematics: {
-      bg: "bg-blue-100",
-      text: "text-blue-800",
-      border: "border-blue-200",
-      gradient: "from-blue-500 to-blue-600",
-    },
-    Science: {
-      bg: "bg-green-100",
-      text: "text-green-800",
-      border: "border-green-200",
-      gradient: "from-green-500 to-green-600",
-    },
-    English: {
-      bg: "bg-purple-100",
-      text: "text-purple-800",
-      border: "border-purple-200",
-      gradient: "from-purple-500 to-purple-600",
-    },
-    Technology: {
-      bg: "bg-indigo-100",
-      text: "text-indigo-800",
-      border: "border-indigo-200",
-      gradient: "from-indigo-500 to-indigo-600",
-    },
-    History: {
-      bg: "bg-amber-100",
-      text: "text-amber-800",
-      border: "border-amber-200",
-      gradient: "from-amber-500 to-amber-600",
-    },
-    Arts: {
-      bg: "bg-pink-100",
-      text: "text-pink-800",
-      border: "border-pink-200",
-      gradient: "from-pink-500 to-pink-600",
-    },
-  };
-
-  const colors = departmentColors[teacher.department] || {
-    bg: "bg-green-100",
-    text: "text-green-800",
-    border: "border-green-200",
-    gradient: "from-green-500 to-green-600",
-  };
+  // const departmentColors: Record<string, { bg: string; text: string; border: string; gradient: string }> = {
+  //   Mathematics: {
+  //     bg: "bg-blue-100",
+  //     text: "text-blue-800",
+  //     border: "border-blue-200",
+  //     gradient: "from-blue-500 to-blue-600",
+  //   },
+  //   Science: {
+  //     bg: "bg-green-100",
+  //     text: "text-green-800",
+  //     border: "border-green-200",
+  //     gradient: "from-green-500 to-green-600",
+  //   },
+  //   English: {
+  //     bg: "bg-purple-100",
+  //     text: "text-purple-800",
+  //     border: "border-purple-200",
+  //     gradient: "from-purple-500 to-purple-600",
+  //   },
+  //   Technology: {
+  //     bg: "bg-indigo-100",
+  //     text: "text-indigo-800",
+  //     border: "border-indigo-200",
+  //     gradient: "from-indigo-500 to-indigo-600",
+  //   },
+  //   History: {
+  //     bg: "bg-amber-100",
+  //     text: "text-amber-800",
+  //     border: "border-amber-200",
+  //     gradient: "from-amber-500 to-amber-600",
+  //   },
+  //   Arts: {
+  //     bg: "bg-pink-100",
+  //     text: "text-pink-800",
+  //     border: "border-pink-200",
+  //     gradient: "from-pink-500 to-pink-600",
+  //   },
+  // }
 
   return (
     <div
@@ -313,6 +304,7 @@ const TeacherCard: React.FC<{ teacher: Teacher; index: number }> = ({
         transition: "transform 0.3s ease-out",
       }}
       onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div
@@ -336,80 +328,97 @@ const TeacherCard: React.FC<{ teacher: Teacher; index: number }> = ({
               }}
             ></div>
 
-            {/* Department Badge */}
-            <div className="absolute top-4 right-4 z-20">
-              <span
-                className={`px-3 py-1 text-xs font-semibold rounded-full ${colors.bg} ${colors.text} border ${colors.border} backdrop-blur-sm shadow-sm`}
-              >
-                {teacher.department}
-              </span>
+            {/* Floating particles effect */}
+            <div className="absolute inset-0 overflow-hidden rounded-xl pointer-events-none">
+              <div
+                className="absolute w-1.5 h-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                style={{
+                  top: "25%",
+                  left: "20%",
+                  animation: isHovered
+                    ? "float 3s ease-in-out infinite"
+                    : "none",
+                  animationDelay: "0s",
+                }}
+              ></div>
+              <div
+                className="absolute w-1 h-1 bg-white/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                style={{
+                  top: "65%",
+                  right: "25%",
+                  animation: isHovered
+                    ? "float 3s ease-in-out infinite"
+                    : "none",
+                  animationDelay: "1s",
+                }}
+              ></div>
+              <div
+                className="absolute w-1.5 h-1.5 bg-white/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                style={{
+                  bottom: "35%",
+                  left: "30%",
+                  animation: isHovered
+                    ? "float 3s ease-in-out infinite"
+                    : "none",
+                  animationDelay: "2s",
+                }}
+              ></div>
             </div>
 
-            {/* Profile Image */}
-            <div className="relative h-48 overflow-hidden rounded-t-xl">
+            {/* Profile Image - Takes most of the height */}
+            <div className="relative h-72 overflow-hidden rounded-t-xl">
               <img
                 src={teacher.image || "/placeholder.svg"}
                 alt={teacher.name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                style={{
+                  filter: isHovered
+                    ? "saturate(1.2) contrast(1.1)"
+                    : "saturate(1) contrast(1)",
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
 
-              {/* Status indicator */}
-              <div className="absolute bottom-4 left-4 flex items-center space-x-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-white text-xs font-medium bg-black/30 backdrop-blur-sm px-2 py-1 rounded-full">
-                  Available
-                </span>
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-1 group-hover:text-green-700 transition-colors duration-300">
-                {teacher.name}
-              </h3>
-              <p className="text-green-600 font-medium mb-3">{teacher.title}</p>
-              <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                {teacher.bio}
-              </p>
-
-              {/* Subjects */}
-              <div className="flex flex-wrap gap-1 mb-4">
-                {teacher.subjects.slice(0, 2).map((subject, idx) => (
-                  <span
-                    key={idx}
-                    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200"
+              {/* Hover icon overlay */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                  <svg
+                    className="w-6 h-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    {subject}
-                  </span>
-                ))}
-                {teacher.subjects.length > 2 && (
-                  <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200">
-                    +{teacher.subjects.length - 2} more
-                  </span>
-                )}
-              </div>
-
-              {/* Experience */}
-              <div className="flex items-center text-sm text-gray-500">
-                <svg
-                  className="w-4 h-4 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                {teacher.experience} of experience
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
 
-            {/* Flip indicator */}
+            {/* Content - Simplified */}
+            <div className="p-4 flex flex-col justify-between h-24">
+              <div>
+                <h3 className="text-lg font-bold text-gray-800 mb-1 group-hover:text-green-700 transition-colors duration-300 line-clamp-1">
+                  {teacher.name}
+                </h3>
+                <p className="text-green-600 font-medium text-sm line-clamp-1">
+                  {teacher.title}
+                </p>
+              </div>
+            </div>
+
+            {/* Flip indicator - Bottom right with lightning icon */}
             <div className="absolute bottom-4 right-4 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors duration-300">
               <svg
                 className="w-4 h-4 text-green-600"
@@ -555,34 +564,43 @@ const TeacherCard: React.FC<{ teacher: Teacher; index: number }> = ({
         </div>
       </div>
 
-      <style>
-        {`
-          .perspective-1000 {
-            perspective: 1000px;
+      <style>{`
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+        .line-clamp-1 {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        @keyframes float {
+          0% {
+            transform: translateY(0px);
           }
-          .transform-style-preserve-3d {
-            transform-style: preserve-3d;
+          50% {
+            transform: translateY(-6px);
           }
-          .backface-hidden {
-            backface-visibility: hidden;
+          100% {
+            transform: translateY(0px);
           }
-          .rotate-y-180 {
-            transform: rotateY(180deg);
-          }
-          .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-          }
-        `}
-      </style>
+        }
+      `}</style>
     </div>
   );
 };
 
 // Main Teachers Directory Component
-const TeachersDirectory: React.FC = () => {
+const TeachersDirectorySimplified: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -597,7 +615,8 @@ const TeachersDirectory: React.FC = () => {
       teacher.subjects.some((subject) =>
         subject.toLowerCase().includes(searchTerm.toLowerCase())
       );
-
+    console.log(setSelectedDepartment);
+    console.log(setSearchTerm);
     return matchesDepartment && matchesSearch;
   });
 
@@ -612,37 +631,22 @@ const TeachersDirectory: React.FC = () => {
 
       <div ref={containerRef} className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-800 via-emerald-700 to-teal-700 bg-clip-text text-transparent mb-4 leading-tight">
+            Meet Our Teachers
+          </h2>
+        </div>
 
         {/* Search and Filter */}
-        <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
-          <h1 className="text-3xl text-center md:text-left flex-1">
-            Our Teachers
-          </h1>
-          <div className="flex gap-4 w-full md:w-auto">
-            <select
-              className="border border-green-200 rounded-lg px-4 py-2 bg-white text-green-800 focus:outline-none focus:ring-2 focus:ring-green-300"
-              value={selectedDepartment}
-              onChange={(e) => setSelectedDepartment(e.target.value)}
-            >
-              {departments.map((dept) => (
-                <option key={dept} value={dept}>
-                  {dept}
-                </option>
-              ))}
-            </select>
-            <input
-              type="text"
-              className="border border-green-200 rounded-lg px-4 py-2 bg-white text-green-800 focus:outline-none focus:ring-2 focus:ring-green-300"
-              placeholder="Search teachers..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
-        </div>
+
         {/* Teachers Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredTeachers.map((teacher, index) => (
-            <TeacherCard key={teacher.id} teacher={teacher} index={index} />
+            <SimplifiedTeacherCard
+              key={teacher.id}
+              teacher={teacher}
+              index={index}
+            />
           ))}
         </div>
 
@@ -674,9 +678,34 @@ const TeachersDirectory: React.FC = () => {
         )}
 
         {/* Stats */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-green-100">
+            <div className="text-3xl font-bold text-green-600 mb-2">
+              {teachersData.length}
+            </div>
+            <div className="text-gray-600">Dedicated Teachers</div>
+          </div>
+          <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-green-100">
+            <div className="text-3xl font-bold text-green-600 mb-2">
+              {departments.length - 1}
+            </div>
+            <div className="text-gray-600">Academic Departments</div>
+          </div>
+          <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-green-100">
+            <div className="text-3xl font-bold text-green-600 mb-2">
+              {Math.round(
+                teachersData.reduce(
+                  (acc, teacher) => acc + Number.parseInt(teacher.experience),
+                  0
+                ) / teachersData.length
+              )}
+            </div>
+            <div className="text-gray-600">Average Experience (Years)</div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default TeachersDirectory;
+export default TeachersDirectorySimplified;

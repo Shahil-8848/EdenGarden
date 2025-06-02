@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { ChevronLeft, ChevronRight, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 // import { Separator } from "@/components/ui/separator";
 import {
   Card,
@@ -20,11 +20,13 @@ import PrincipalMessage from "@/MyComponents/MsgFromPrincipal";
 // import HouseCap7 from "../../public/SchoolPics/HouseCap7.jpg";
 import votecl from "../SchoolPics/votecl-8.jpg";
 import kidsBanner from "../SchoolPics/kidsGroup.jpg";
+import BannerSlider from "@/MyComponents/BannerSlider";
+
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
-  const bannerRef = useRef(null);
+  // const bannerRef = useRef(null);
   const aboutRef = useRef(null);
   const featuresRef = useRef(null);
   const newsRef = useRef(null);
@@ -32,7 +34,7 @@ const HomePage = () => {
   const eventsRef = useRef(null);
 
   // Banner slider state and data
-  const [currentSlide, setCurrentSlide] = useState(0);
+
   const bannerImages = [
     "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/494627999_1163956128862495_6777657293295228081_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9r90JNnxiMMQ7kNvwFvjst0&_nc_oc=Adl9mK2Bv5ElDfb2fGlHcK83XFaVoHkvAGDa8eoUL2UDg0Wv0E2HFN2TzJr_hAbS4feL6ZWQizPSPVzrM6Lhl4RL&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=qhOmtzqckReyYYISrrCaFA&oh=00_AfKt3h8OFlKmJUwTZixNAgJ3tBO3FeDAgG1x8dta1bSQig&oe=6840B2BF",
     "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/499701828_1171916121399829_1048416657670283510_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Tzp92pX3gO4Q7kNvwGSdtdL&_nc_oc=AdnZLChCbTIEUyOMgWSqJGdCAHCNWDeYyeEoD-gaNnZG3IyAi5swVk_pGpNAz4DJP5T_vQrg_NCLf7H1luyqhse9&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=bMKL1hKCq9hIwaNF6X5Xng&oh=00_AfK_4C868EoZLfATPQ6oieptvRBJ36oMtcRAPSwI-ZSCCg&oe=6840A693",
@@ -41,26 +43,26 @@ const HomePage = () => {
     votecl,
   ];
 
-  // Function to navigate to next slide
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % bannerImages.length);
-  };
+  // // Function to navigate to next slide
+  // const nextSlide = () => {
+  //   setCurrentSlide((prev) => (prev + 1) % bannerImages.length);
+  // };
 
   // Function to navigate to previous slide
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + bannerImages.length) % bannerImages.length
-    );
-  };
+  // const prevSlide = () => {
+  //   setCurrentSlide(
+  //     (prev) => (prev - 1 + bannerImages.length) % bannerImages.length
+  //   );
+  // };
 
-  // Auto slider change
-  useEffect(() => {
-    const sliderInterval = setInterval(() => {
-      nextSlide();
-    }, 5000); // Change slide every 5 seconds
+  // // Auto slider change
+  // useEffect(() => {
+  //   const sliderInterval = setInterval(() => {
+  //     nextSlide();
+  //   }, 5000); // Change slide every 5 seconds
 
-    return () => clearInterval(sliderInterval);
-  }, []);
+  //   return () => clearInterval(sliderInterval);
+  // }, []);
 
   // GSAP animations initialization
   useEffect(() => {
@@ -73,7 +75,7 @@ const HomePage = () => {
 
     // Page load animation with staggered effect
     const pageElements = [
-      bannerRef.current,
+      // bannerRef.current,
       aboutRef.current,
       featuresRef.current,
       newsRef.current,
@@ -152,7 +154,6 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-
       {/* Alert Bar Schools notification ya halne */}
       <div className="bg-lime-200 text-emerald-800 py-2">
         <div className="container mx-auto px-4">
@@ -162,7 +163,6 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-
       {/* Header/Navigation */}
       <header className="py-4">
         <div className="container mx-auto px-4">
@@ -262,57 +262,10 @@ const HomePage = () => {
           </div>
         </div>
       </header>
-
       {/* Main Content */}
       <main>
         {/* Hero Banner Section with Auto-sliding */}
-        <section ref={bannerRef} className="py-3">
-          <div className="w-full max-w-[1400px] mx-auto px-2 sm:px-4">
-            <div className="relative   rounded-lg overflow-hidden shadow-lg shadow-green-200">
-              <AspectRatio ratio={16 / 5} className="bg-slate-50">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-all duration-500 ease-in-out"
-                  style={{
-                    backgroundImage: `url(${bannerImages[currentSlide]})`,
-                  }}
-                >
-                  <div className="absolute inset-0 bg-green/30"></div>
-                </div>
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                    Eden Garden Education
-                  </h2>
-                  <p className="text-xl md:text-2xl">
-                    Nurturing minds, shaping futures
-                  </p>
-                </div>
-                <div className="absolute bottom-4 left-4 flex space-x-1">
-                  {bannerImages.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`w-3 h-3 rounded-full ${
-                        currentSlide === index ? "bg-green-600" : "bg-white"
-                      }`}
-                      onClick={() => setCurrentSlide(index)}
-                    />
-                  ))}
-                </div>
-                <button
-                  className="absolute top-1/2 left-4 -translate-y-1/2 w-10 h-10 bg-black/30 hover:bg-black/50 rounded-full flex items-center justify-center text-white"
-                  onClick={prevSlide}
-                >
-                  <ChevronLeft size={24} />
-                </button>
-                <button
-                  className="absolute top-1/2 right-4 -translate-y-1/2 w-10 h-10 bg-black/30 hover:bg-black/50 rounded-full flex items-center justify-center text-white"
-                  onClick={nextSlide}
-                >
-                  <ChevronRight size={24} />
-                </button>
-              </AspectRatio>
-            </div>
-          </div>
-        </section>
+        <BannerSlider bannerImages={bannerImages} />
 
         {/* About Section */}
         <section ref={aboutRef} className="py-12">
@@ -818,7 +771,7 @@ const HomePage = () => {
                 Foundation All Rights Reserved
               </p>
               <div className="flex items-center space-x-2">
-                <span>Developed By:</span>
+                {/* <span>Developed By:</span> */}
                 <a
                   href="https://digitalnepal.com"
                   className="text-white hover:text-white/80 transition-colors font-medium"
