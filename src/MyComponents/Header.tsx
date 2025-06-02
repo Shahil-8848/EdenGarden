@@ -2,6 +2,7 @@
 
 import type React from "react";
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   Menu,
   X,
@@ -30,22 +31,59 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const menuItemsRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   const navigationItems = [
-    { name: "Home", href: "#", icon: Home, active: true },
-    { name: "About", href: "#", icon: Info },
-    { name: "Academic", href: "#", icon: BookOpen },
-    { name: "Teachers", href: "/teachers", icon: Users },
-    { name: "Blogs", href: "/blogs", icon: FileText },
-    { name: "Gallery", href: "#", icon: ImageIcon },
-    { name: "Contact", href: "#", icon: Phone },
+    {
+      name: "Home",
+      to: "/",
+      icon: Home,
+      active: window.location.pathname === "/",
+    },
+    {
+      name: "About",
+      to: "/about",
+      icon: Info,
+      active: window.location.pathname === "/about",
+    },
+    {
+      name: "Academic",
+      to: "/academic",
+      icon: BookOpen,
+      active: window.location.pathname === "/academic",
+    },
+    {
+      name: "Teachers",
+      to: "/teachers",
+      icon: Users,
+      active: window.location.pathname === "/teachers",
+    },
+    {
+      name: "Blogs",
+      to: "/blogs",
+      icon: FileText,
+      active: window.location.pathname === "/blogs",
+    },
+    {
+      name: "Gallery",
+      to: "/gallery",
+      icon: ImageIcon,
+      active: window.location.pathname === "/gallery",
+    },
+    {
+      name: "Contact",
+      to: "/contact",
+      icon: Phone,
+      active: window.location.pathname === "/contact",
+    },
   ];
 
-  // Handle scroll effect
+  // Handle scroll effect and sticky header
   useEffect(() => {
     const handleScroll = () => {
       // Only consider it scrolled after passing the contact and alert bars
-      setIsScrolled(window.scrollY > 80);
+      const scrollThreshold = 80;
+      setIsScrolled(window.scrollY > scrollThreshold);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -107,7 +145,6 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    console.log(isScrolled);
   };
 
   return (
@@ -196,10 +233,22 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Main Header - Now positioned relative instead of fixed */}
-      <header className="bg-white z-30">
+      {/* Main Header - Now with sticky functionality */}
+      <div
+        ref={headerRef}
+        className="bg-white z-40 transition-all duration-300"
+        style={{
+          position: "sticky",
+          top: 0,
+          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.1)" : "none",
+        }}
+      >
         <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-3">
-          <div className="border border-gray-200/60 rounded-xl bg-white/90 backdrop-blur-sm shadow-lg shadow-emerald-200/30">
+          <div
+            className={`border border-gray-200/60 rounded-xl bg-white/90 backdrop-blur-sm transition-all duration-300 ${
+              isScrolled ? "shadow-lg shadow-emerald-200/30" : "shadow-md"
+            }`}
+          >
             <div className="flex justify-between items-center py-3 md:py-4 px-4 md:px-6">
               {/* Logo Section */}
               <div className="flex items-center space-x-3 md:space-x-4">
@@ -240,12 +289,12 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                 </div>
               </div>
 
-              {/* Desktop Navigation */}
+              {/* Desktop Navigation - Using React Router Link components */}
               <nav className="hidden lg:flex items-center space-x-8">
                 {navigationItems.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.to}
                     className={`group relative text-sm font-semibold transition-all duration-300 ${
                       item.active
                         ? "text-emerald-600"
@@ -254,6 +303,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                     style={{
                       fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       letterSpacing: "0.01em",
+                      textDecoration: "none",
                     }}
                   >
                     {item.name}
@@ -262,7 +312,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                         item.active ? "w-full" : "w-0 group-hover:w-full"
                       }`}
                     />
-                  </a>
+                  </Link>
                 ))}
               </nav>
 
@@ -277,7 +327,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* Mobile Menu Overlay */}
       <div
@@ -335,7 +385,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
           </button>
         </div>
 
-        {/* Mobile Menu Items */}
+        {/* Mobile Menu Items - Using React Router Link components */}
         <div ref={menuItemsRef} className="py-6">
           <div className="px-6 mb-4">
             <p
@@ -349,15 +399,16 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
           {navigationItems.map((item) => {
             const IconComponent = item.icon;
             return (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.to}
                 onClick={closeMobileMenu}
                 className={`group flex items-center justify-between px-6 py-4 transition-all duration-300 ${
                   item.active
                     ? "bg-emerald-50 border-r-4 border-emerald-500"
                     : "hover:bg-gray-50"
                 }`}
+                style={{ textDecoration: "none" }}
               >
                 <div className="flex items-center space-x-4">
                   <div
@@ -388,7 +439,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                       : "text-gray-400 group-hover:text-emerald-500 group-hover:translate-x-1"
                   }`}
                 />
-              </a>
+              </Link>
             );
           })}
 
