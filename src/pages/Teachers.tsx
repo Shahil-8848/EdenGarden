@@ -35,8 +35,7 @@ const teachersData: Teacher[] = [
     name: "Khemraj Sharma Acharya",
     title: "Head of Mathematics Department",
     department: "English",
-    image:
-      "https://scontent.fktm1-1.fna.fbcdn.net/v/t39.30808-1/481240399_592520140281400_3142594933312340788_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_ohc=rYIUrkKP9tQQ7kNvwFpu7jh&_nc_oc=AdmSiS48YjJFwuUg5ltzDyK7z_z4rRJYvrA_rvi89RIi3y7UwNTi6LCGb-AGwTeiKUg&_nc_zt=24&_nc_ht=scontent.fktm1-1.fna&_nc_gid=1zd1EubV831R6FNm10Vh0w&oh=00_AfKWgHKX34bOffu03XPLPSVt7slFYXxPxFXbVa4EsQ8ekQ&oe=6842BF9C",
+    image: demo,
     email: "e.rodriguez@school.edu",
     phone: "+1 (555) 123-4567",
     education: [
