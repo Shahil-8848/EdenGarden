@@ -3,7 +3,7 @@
 import type React from "react";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
+import event1 from "../SchoolPics/kidsGroup1.jpg";
 // Types
 interface EventItem {
   id: string;
@@ -22,8 +22,7 @@ const schoolEvents: EventItem[] = [
     title: "Annual Science Exhibition",
     description:
       "Our students showcased innovative projects exploring renewable energy, biodiversity conservation, and sustainable technology solutions.",
-    image:
-      "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=600&h=400&fit=crop",
+    image: event1,
     date: "June 15, 2024",
     category: "Academic",
     link: "/events/science-exhibition",
@@ -33,8 +32,7 @@ const schoolEvents: EventItem[] = [
     title: "Inter-School Sports Tournament",
     description:
       "Our athletes competed in basketball, soccer, and track events, demonstrating exceptional sportsmanship and bringing home three gold medals.",
-    image:
-      "https://images.unsplash.com/photo-1587329310686-91414b8e3cb7?w=600&h=400&fit=crop",
+    image: event1,
     date: "May 28, 2024",
     category: "Sports",
     link: "/events/sports-tournament",
@@ -44,8 +42,7 @@ const schoolEvents: EventItem[] = [
     title: "Cultural Heritage Day",
     description:
       "Students celebrated our diverse community through traditional performances, cuisine, and art representing over 20 different cultural backgrounds.",
-    image:
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
+    image: event1,
     date: "April 12, 2024",
     category: "Cultural",
     link: "/events/heritage-day",
@@ -55,8 +52,7 @@ const schoolEvents: EventItem[] = [
     title: "Environmental Awareness Campaign",
     description:
       "Our eco-club organized a campus-wide initiative to reduce plastic waste, plant native trees, and implement sustainable practices.",
-    image:
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=400&fit=crop",
+    image: event1,
     date: "March 22, 2024",
     category: "Environment",
     link: "/events/eco-campaign",
@@ -66,8 +62,7 @@ const schoolEvents: EventItem[] = [
     title: "Literary Festival & Book Fair",
     description:
       "Students engaged with renowned authors, participated in creative writing workshops, and explored a diverse collection of books.",
-    image:
-      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop",
+    image: event1,
     date: "February 18, 2024",
     category: "Academic",
     link: "/events/literary-festival",
@@ -77,8 +72,7 @@ const schoolEvents: EventItem[] = [
     title: "STEM Innovation Challenge",
     description:
       "Teams competed to design solutions for real-world problems using robotics, coding, and engineering principles.",
-    image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
+    image: event1,
     date: "January 25, 2024",
     category: "Technology",
     link: "/events/stem-challenge",
@@ -88,8 +82,7 @@ const schoolEvents: EventItem[] = [
     title: "Music & Arts Showcase",
     description:
       "Our talented musicians and artists displayed their creativity through concerts, art exhibitions, and collaborative performances.",
-    image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
+    image: event1,
     date: "December 10, 2023",
     category: "Arts",
     link: "/events/music-arts-showcase",
@@ -99,8 +92,7 @@ const schoolEvents: EventItem[] = [
     title: "Community Service Day",
     description:
       "Students volunteered at local shelters, cleaned parks, and organized food drives, making a positive impact in our community.",
-    image:
-      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop",
+    image: event1,
     date: "November 15, 2023",
     category: "Community",
     link: "/events/community-service",

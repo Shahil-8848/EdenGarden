@@ -17,9 +17,9 @@ import WhyUs from "../MyComponents/WhyUs";
 import { Link } from "react-router-dom";
 import EventSlider from "@/MyComponents/EventSlider";
 import PrincipalMessage from "@/MyComponents/MsgFromPrincipal";
-import HouseCap7 from "../../public/SchoolPics/HouseCap7.jpg";
-import votecl from "../../public/SchoolPics/votecl-8.jpg";
-import kidsBanner from "../../public/SchoolPics/kidsGroup.jpg";
+// import HouseCap7 from "../../public/SchoolPics/HouseCap7.jpg";
+import votecl from "../SchoolPics/votecl-8.jpg";
+import kidsBanner from "../SchoolPics/kidsGroup.jpg";
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -221,15 +221,15 @@ const HomePage = () => {
                 >
                   Academic
                 </a>
-                <a
-                  href="#"
+                <Link
+                  to="/teachers"
                   className="nav-item text-sm font-medium text-gray-600 hover:text-primary"
                   style={
                     { "--nav-hover-color": primaryColor } as React.CSSProperties
                   }
                 >
-                  Students
-                </a>
+                  Teachers
+                </Link>
                 <Link
                   to="/blogs"
                   className="nav-item text-sm font-medium text-gray-600 hover:text-primary"
@@ -268,7 +268,7 @@ const HomePage = () => {
         {/* Hero Banner Section with Auto-sliding */}
         <section ref={bannerRef} className="py-3">
           <div className="w-full max-w-[1400px] mx-auto px-2 sm:px-4">
-            <div className="relative border border-green-600  rounded-lg overflow-hidden shadow-lg shadow-black">
+            <div className="relative   rounded-lg overflow-hidden shadow-lg shadow-green-200">
               <AspectRatio ratio={16 / 5} className="bg-slate-50">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-all duration-500 ease-in-out"
