@@ -406,7 +406,7 @@ const ProfessionalBannerSlider: React.FC<EnhancedBannerProps> = ({
                   className={`absolute top-1/2 left-3 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 border border-white/20 hover:border-white/30 group ${
                     isMobile
                       ? "w-14 h-14"
-                      : "w-12 h-12 md:w-16 md:h-16 md:left-4 md:left-8"
+                      : "w-12 h-12 md:w-16 md:h-16 md:left-8"
                   }`}
                   onClick={prevSlide}
                   aria-label="Previous slide"
@@ -420,7 +420,7 @@ const ProfessionalBannerSlider: React.FC<EnhancedBannerProps> = ({
                   className={`absolute top-1/2 right-3 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 border border-white/20 hover:border-white/30 group ${
                     isMobile
                       ? "w-14 h-14"
-                      : "w-12 h-12 md:w-16 md:h-16 md:right-4 md:right-8"
+                      : "w-12 h-12 md:w-16 md:h-16 md:right-8"
                   }`}
                   onClick={nextSlide}
                   aria-label="Next slide"
