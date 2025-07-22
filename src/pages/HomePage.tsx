@@ -22,7 +22,9 @@ import votecl from "../SchoolPics/votecl-8.jpg";
 import kidsBanner from "../SchoolPics/kidsGroup.jpg";
 import BannerSlider from "@/MyComponents/BannerSlider";
 import Header from "@/MyComponents/Header";
-
+import edenChildBanner1 from "../SchoolPics/edenChildBanner1.jpg";
+import EdenBanner2 from "../SchoolPics/EdenBanner2.jpg";
+import See from "../SchoolPics/SeeBatch2081.jpg";
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,13 +38,7 @@ const HomePage = () => {
 
   // Banner slider state and data
 
-  const bannerImages = [
-    "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/494627999_1163956128862495_6777657293295228081_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9r90JNnxiMMQ7kNvwFvjst0&_nc_oc=Adl9mK2Bv5ElDfb2fGlHcK83XFaVoHkvAGDa8eoUL2UDg0Wv0E2HFN2TzJr_hAbS4feL6ZWQizPSPVzrM6Lhl4RL&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=qhOmtzqckReyYYISrrCaFA&oh=00_AfKt3h8OFlKmJUwTZixNAgJ3tBO3FeDAgG1x8dta1bSQig&oe=6840B2BF",
-    "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/499701828_1171916121399829_1048416657670283510_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Tzp92pX3gO4Q7kNvwGSdtdL&_nc_oc=AdnZLChCbTIEUyOMgWSqJGdCAHCNWDeYyeEoD-gaNnZG3IyAi5swVk_pGpNAz4DJP5T_vQrg_NCLf7H1luyqhse9&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=bMKL1hKCq9hIwaNF6X5Xng&oh=00_AfK_4C868EoZLfATPQ6oieptvRBJ36oMtcRAPSwI-ZSCCg&oe=6840A693",
-    kidsBanner,
-
-    votecl,
-  ];
+  const bannerImages = [See, edenChildBanner1, kidsBanner, EdenBanner2, votecl];
 
   // // Function to navigate to next slide
   // const nextSlide = () => {

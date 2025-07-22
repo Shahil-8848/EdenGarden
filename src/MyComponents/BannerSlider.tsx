@@ -255,8 +255,8 @@ const ProfessionalBannerSlider: React.FC<EnhancedBannerProps> = ({
   }
 
   return (
-    <section ref={bannerRef} className="py-1 md:py-6">
-      <div className="w-full max-w-[1400px] mx-auto px-1 sm:px-3 md:px-6">
+    <section ref={bannerRef} className="py-1 md:py-3">
+      <div className="w-full max-w-[1600px] mx-auto px-1 sm:px-3 md:px-6">
         <div className="relative rounded-lg md:rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/20 border border-white/10 bg-slate-900">
           {/* Dynamic Aspect Ratio - Much taller on mobile for better presence */}
           <AspectRatio

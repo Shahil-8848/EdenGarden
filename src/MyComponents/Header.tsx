@@ -18,7 +18,7 @@ import {
   Info,
 } from "lucide-react";
 import { gsap } from "gsap";
-
+import edenLogo from "../../src/assets/edenLogo.png";
 interface HeaderProps {
   primaryColor?: string;
 }
@@ -167,7 +167,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
               </div>
               <div className="hidden md:flex items-center space-x-1">
                 <Mail size={14} />
-                <span className="text-xs">contact@edengarden.edu</span>
+                <span className="text-xs">edengarden169@gmail.com</span>
               </div>
             </div>
             <div className="hidden sm:flex items-center space-x-4">
@@ -236,7 +236,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
       {/* Main Header - Now with sticky functionality */}
       <div
         ref={headerRef}
-        className="bg-white z-40 transition-all duration-300"
+        className=" z-40 transition-all duration-300"
         style={{
           position: "sticky",
           top: 0,
@@ -245,18 +245,18 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
       >
         <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-3">
           <div
-            className={`border border-gray-200/60 rounded-xl bg-white/90 backdrop-blur-sm transition-all duration-300 ${
+            className={`border border-gray-200/60 rounded-xl bg-gray-100 backdrop-blur-sm transition-all duration-300 ${
               isScrolled ? "shadow-lg shadow-emerald-200/30" : "shadow-md"
             }`}
           >
             <div className="flex justify-between items-center py-3 md:py-4 px-4 md:px-6">
               {/* Logo Section */}
               <div className="flex items-center space-x-3 md:space-x-4">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center overflow-hidden ring-2 ring-white shadow-lg">
+                <div className="w-18 h-18 md:w-16 md:h-16 rounded-full flex items-center justify-center overflow-hidden ring-2 ring-white shadow-lg">
                   <img
-                    src="https://scontent.fktm19-1.fna.fbcdn.net/v/t39.30808-6/480402285_1104560078135434_135699426940138276_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Pkk9HiNPjk0Q7kNvwGPmvTQ&_nc_oc=AdktzjCnyOO5LOaUjuQQkZmSn7vnJZxB0D_pTy5vXFbcFSJ28tMo1gA323vgglpwERo&_nc_zt=23&_nc_ht=scontent.fktm19-1.fna&_nc_gid=uwSvC4VfkPEwpQqv0j1L-w&oh=00_AfIDIyCK-kbWaU8HxvWqTKWuvaYI4nIZUE5td6mRfjNHFA&oe=68417481"
+                    src={edenLogo}
                     alt="Eden Garden Education Foundation Logo"
-                    className="w-full h-full object-cover"
+                    className="w-12 h-13"
                   />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -471,7 +471,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                   <Mail size={16} />
                 </div>
                 <span className="text-sm text-gray-700">
-                  contact@edengarden.edu
+                  edengarden169@gmail.com
                 </span>
               </div>
             </div>
