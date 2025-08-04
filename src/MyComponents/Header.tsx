@@ -236,17 +236,17 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
       {/* Main Header - Now with sticky functionality */}
       <div
         ref={headerRef}
-        className=" z-40 transition-all duration-300"
+        className=" z-40 transition-all duration-300 bg-white"
         style={{
           position: "sticky",
           top: 0,
-          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.1)" : "none",
+          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.1) " : "none",
         }}
       >
         <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-3">
           <div
             className={`border border-gray-200/60 rounded-xl bg-gray-100 backdrop-blur-sm transition-all duration-300 ${
-              isScrolled ? "shadow-lg shadow-emerald-200/30" : "shadow-md"
+              isScrolled ? "shadow-lg  shadow-emerald-200/30" : "shadow-md"
             }`}
           >
             <div className="flex justify-between items-center py-3 md:py-4 px-4 md:px-6">
