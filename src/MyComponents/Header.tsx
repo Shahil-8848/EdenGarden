@@ -227,8 +227,8 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
       <div className="bg-lime-200 text-emerald-800 py-2">
         <div className="container mx-auto px-4">
           <p className="text-sm text-center font-medium">
-            Eden Garden Education Foundation celebrates Bhanu Jayanti this
-            month.
+            Eden Garden Education Foundation celebrates Krishna Janmashtami this
+            month
           </p>
         </div>
       </div>
@@ -350,7 +350,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden ring-2 ring-white shadow-md">
               <img
-                src="https://scontent.fktm19-1.fna.fbcdn.net/v/t39.30808-6/480402285_1104560078135434_135699426940138276_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Pkk9HiNPjk0Q7kNvwGPmvTQ&_nc_oc=AdktzjCnyOO5LOaUjuQQkZmSn7vnJZxB0D_pTy5vXFbcFSJ28tMo1gA323vgglpwERo&_nc_zt=23&_nc_ht=scontent.fktm19-1.fna&_nc_gid=uwSvC4VfkPEwpQqv0j1L-w&oh=00_AfIDIyCK-kbWaU8HxvWqTKWuvaYI4nIZUE5td6mRfjNHFA&oe=68417481"
+                src={edenLogo}
                 alt="Logo"
                 className="w-full h-full object-cover"
               />
