@@ -4,6 +4,11 @@ import type React from "react";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import event1 from "../SchoolPics/kidsGroup1.jpg";
+import badge from "../SchoolPics/Events/Badge.jpeg";
+import env from "../SchoolPics/Events/EnvDay.jpeg";
+import poet from "../SchoolPics/Events/WinnerPoet.jpeg";
+import houses from "../SchoolPics/Events/HouseSelection.jpeg";
+import futsal from "../SchoolPics/Events/Futsal.jpeg";
 // Types
 interface EventItem {
   id: string;
@@ -19,27 +24,27 @@ interface EventItem {
 const schoolEvents: EventItem[] = [
   {
     id: "1",
-    title: "Annual Science Exhibition",
+    title: "Annual School Captain & House Captain Badges",
     description:
       "Our students showcased innovative projects exploring renewable energy, biodiversity conservation, and sustainable technology solutions.",
-    image: event1,
+    image: badge,
     date: "June 15, 2024",
     category: "Academic",
     link: "/events/science-exhibition",
   },
   {
     id: "2",
-    title: "Inter-School Sports Tournament",
+    title: "Envrionment Day",
     description:
       "Our athletes competed in basketball, soccer, and track events, demonstrating exceptional sportsmanship and bringing home three gold medals.",
-    image: event1,
+    image: env,
     date: "May 28, 2024",
     category: "Sports",
     link: "/events/sports-tournament",
   },
   {
     id: "3",
-    title: "Cultural Heritage Day",
+    title: "Art work by Kids",
     description:
       "Students celebrated our diverse community through traditional performances, cuisine, and art representing over 20 different cultural backgrounds.",
     image: event1,
@@ -49,30 +54,30 @@ const schoolEvents: EventItem[] = [
   },
   {
     id: "4",
-    title: "Environmental Awareness Campaign",
+    title: "Bhanu Jayanti Poetry Winner",
     description:
       "Our eco-club organized a campus-wide initiative to reduce plastic waste, plant native trees, and implement sustainable practices.",
-    image: event1,
+    image: poet,
     date: "March 22, 2024",
     category: "Environment",
     link: "/events/eco-campaign",
   },
   {
     id: "5",
-    title: "Literary Festival & Book Fair",
+    title: "Houses Captain",
     description:
       "Students engaged with renowned authors, participated in creative writing workshops, and explored a diverse collection of books.",
-    image: event1,
+    image: houses,
     date: "February 18, 2024",
     category: "Academic",
     link: "/events/literary-festival",
   },
   {
     id: "6",
-    title: "STEM Innovation Challenge",
+    title: "InterHouse Futsal Tournament",
     description:
       "Teams competed to design solutions for real-world problems using robotics, coding, and engineering principles.",
-    image: event1,
+    image: futsal,
     date: "January 25, 2024",
     category: "Technology",
     link: "/events/stem-challenge",

@@ -6,13 +6,13 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // import { Separator } from "@/components/ui/separator";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
 import WhyUs from "../MyComponents/WhyUs";
 // import { Link } from "react-router-dom";
 import EventSlider from "@/MyComponents/EventSlider";
@@ -301,7 +301,7 @@ const HomePage = () => {
 
         {/* Latest News Section */}
         <EventSlider />
-        <section ref={newsRef} className="py-12">
+        {/* <section ref={newsRef} className="py-12">
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-8">
               <div>
@@ -361,7 +361,7 @@ const HomePage = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Events Section */}
         <section ref={eventsRef} className="py-12 bg-gray-50">

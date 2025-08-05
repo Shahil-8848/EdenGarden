@@ -78,10 +78,15 @@ export default function ElearningHero() {
             with us from anywhere
           </h2>
           <p className="text-gray-600 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod
-            tempor incididunt labore dolore magna aliquam ipsum ad minim. Sed
-            duis augue, commodo ornare filis non, efficitur molestie metus
-            pharetra molestie.
+            At our school, we are committed to providing a nurturing and
+            inclusive environment where every student can thrive. We focus on
+            both academic excellence and character development, ensuring
+            students grow into confident, responsible, and well-rounded
+            individuals. Our dedicated teachers, modern teaching methods, and
+            well-equipped facilities help create a supportive atmosphere for
+            learning. With a strong emphasis on discipline, values, and
+            individual attention, we strive to bring out the best in every
+            child. Choosing our school means choosing a brighter future.
           </p>
 
           {/* Features grid */}
@@ -90,19 +95,19 @@ export default function ElearningHero() {
               <div className="rounded-full bg-rose-100 p-1">
                 <CheckCircle className="h-5 w-5 text-rose-500" />
               </div>
-              <span className="font-medium">Expert trainers</span>
+              <span className="font-medium">Qualified teachers</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="rounded-full bg-violet-100 p-1">
                 <CheckCircle className="h-5 w-5 text-violet-500" />
               </div>
-              <span className="font-medium">Online learning</span>
+              <span className="font-medium">Collaborative learning</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="rounded-full bg-amber-100 p-1">
                 <CheckCircle className="h-5 w-5 text-amber-500" />
               </div>
-              <span className="font-medium">Lifetime access</span>
+              <span className="font-medium">Sound Learning Environment</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="rounded-full bg-teal-100 p-1">
