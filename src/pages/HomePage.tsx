@@ -439,7 +439,7 @@ const HomePage = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section ref={testimonialsRef} className="py-12">
+        {/* <section ref={testimonialsRef} className="py-12">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-800 mb-2">
@@ -488,7 +488,7 @@ const HomePage = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
         <PrincipalMessage />
       </main>
 

@@ -27,7 +27,7 @@ interface PrincipalData {
 
 // Sample data
 const principalData: PrincipalData = {
-  name: "Dr. Mohan Acharya",
+  name: "Mohan Acharya",
   title: "Principal & Educational Leader",
   image:
     "https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg",

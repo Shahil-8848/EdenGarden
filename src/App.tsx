@@ -12,9 +12,6 @@ function App() {
           <Route path="/teachers" element={<Teachers />} />
         </Routes>
       </div>
-      <footer>
-        <p>© 2023 Eden. All rights reserved.</p>
-      </footer>
     </BrowserRouter>
   );
 }
