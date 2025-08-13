@@ -26,7 +26,7 @@ const schoolEvents: EventItem[] = [
     id: "1",
     title: "Annual School Captain & House Captain Badges",
     description:
-      "Our students showcased innovative projects exploring renewable energy, biodiversity conservation, and sustainable technology solutions.",
+      "Selection of School, House and Class Captain along with badges for them  ",
     image: badge,
     date: "June 15, 2024",
     category: "Academic",
@@ -36,7 +36,7 @@ const schoolEvents: EventItem[] = [
     id: "2",
     title: "Envrionment Day",
     description:
-      "Our athletes competed in basketball, soccer, and track events, demonstrating exceptional sportsmanship and bringing home three gold medals.",
+      "Students contributed to the sustainable environment by planting tres and promoting greeny",
     image: env,
     date: "May 28, 2024",
     category: "Sports",
@@ -46,7 +46,7 @@ const schoolEvents: EventItem[] = [
     id: "3",
     title: "Art work by Kids",
     description:
-      "Students celebrated our diverse community through traditional performances, cuisine, and art representing over 20 different cultural backgrounds.",
+      "Junior Kids drawing and handcrafts. Involving drawing, coloring and presenting there artwork.",
     image: event1,
     date: "April 12, 2024",
     category: "Cultural",
@@ -56,7 +56,7 @@ const schoolEvents: EventItem[] = [
     id: "4",
     title: "Bhanu Jayanti Poetry Winner",
     description:
-      "Our eco-club organized a campus-wide initiative to reduce plastic waste, plant native trees, and implement sustainable practices.",
+      "Program organized by the school to promote literature and poetry writing in the special occassion of Bhanu Jayanti",
     image: poet,
     date: "March 22, 2024",
     category: "Environment",
@@ -66,7 +66,7 @@ const schoolEvents: EventItem[] = [
     id: "5",
     title: "Houses Captain",
     description:
-      "Students engaged with renowned authors, participated in creative writing workshops, and explored a diverse collection of books.",
+      "Selection of House Captain, along with their oath taking ceremony. ",
     image: houses,
     date: "February 18, 2024",
     category: "Academic",
@@ -76,32 +76,32 @@ const schoolEvents: EventItem[] = [
     id: "6",
     title: "InterHouse Futsal Tournament",
     description:
-      "Teams competed to design solutions for real-world problems using robotics, coding, and engineering principles.",
+      "Teams competed to represent their houses and enjoyed playing the game for the winning price.",
     image: futsal,
     date: "January 25, 2024",
     category: "Technology",
     link: "/events/stem-challenge",
   },
-  {
-    id: "7",
-    title: "Music & Arts Showcase",
-    description:
-      "Our talented musicians and artists displayed their creativity through concerts, art exhibitions, and collaborative performances.",
-    image: event1,
-    date: "December 10, 2023",
-    category: "Arts",
-    link: "/events/music-arts-showcase",
-  },
-  {
-    id: "8",
-    title: "Community Service Day",
-    description:
-      "Students volunteered at local shelters, cleaned parks, and organized food drives, making a positive impact in our community.",
-    image: event1,
-    date: "November 15, 2023",
-    category: "Community",
-    link: "/events/community-service",
-  },
+  // {
+  //   id: "7",
+  //   title: "Music & Arts Showcase",
+  //   description:
+  //     "Our talented musicians and artists displayed their creativity through concerts, art exhibitions, and collaborative performances.",
+  //   image: event1,
+  //   date: "December 10, 2023",
+  //   category: "Arts",
+  //   link: "/events/music-arts-showcase",
+  // },
+  // {
+  //   id: "8",
+  //   title: "Community Service Day",
+  //   description:
+  //     "Students volunteered at local shelters, cleaned parks, and organized food drives, making a positive impact in our community.",
+  //   image: event1,
+  //   date: "November 15, 2023",
+  //   category: "Community",
+  //   link: "/events/community-service",
+  // },
 ];
 
 // Compact Event Card Component

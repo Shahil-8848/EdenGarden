@@ -395,7 +395,7 @@ const HomePage = () => {
                   </div>
                   <div className="p-4 flex-grow">
                     <h3 className="font-semibold text-lg mb-1">
-                      Annual Sports Day
+                      Krishna Janmashtami
                     </h3>
                     <div className="flex items-center text-gray-500 text-sm mb-2">
                       <svg
@@ -415,8 +415,8 @@ const HomePage = () => {
                       <span>9:00 AM - 4:00 PM</span>
                     </div>
                     <p className="text-gray-600 text-sm">
-                      Join us for a day full of exciting sports activities and
-                      competitions. All students and parents are welcome.
+                      Join us for on the celebration of birth day of Lord
+                      Krishna
                     </p>
                   </div>
                 </div>
@@ -589,7 +589,7 @@ const HomePage = () => {
                     href="mailto:info@samriddhischool.edu.np"
                     className="hover:text-white/80 transition-colors"
                   >
-                    edengarden@gmail.com
+                    edengarden169@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center space-x-3">
