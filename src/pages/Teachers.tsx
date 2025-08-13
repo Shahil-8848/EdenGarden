@@ -123,18 +123,18 @@ const levelConfig = {
 
 // --- SVG & UI COMPONENTS ---
 
-// Reusable Logo Component
-const LogoIcon: React.FC = () => (
-  <svg
-    className="w-10 h-10 text-white"
-    fill="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M12 2L2 5v6.5c0 5.08 3.53 9.68 8.33 11.25.42.13.87.13 1.29 0C16.47 21.18 20 16.58 20 11.5V5L12 2zm0 17.5c-3.13-1.25-5.5-4.88-5.5-8.5V6.3l5.5-2.29 5.5 2.29v5.2c0 3.62-2.37 7.25-5.5 8.5z" />
-    <path d="M12 7.15l-3.5 3.5 1.41 1.41L12 9.97l2.09 2.09 1.41-1.41L12 7.15z" />
-  </svg>
-);
+// // Reusable Logo Component
+// const LogoIcon: React.FC = () => (
+//   <svg
+//     className="w-10 h-10 text-white"
+//     fill="currentColor"
+//     viewBox="0 0 24 24"
+//     xmlns="http://www.w3.org/2000/svg"
+//   >
+//     <path d="M12 2L2 5v6.5c0 5.08 3.53 9.68 8.33 11.25.42.13.87.13 1.29 0C16.47 21.18 20 16.58 20 11.5V5L12 2zm0 17.5c-3.13-1.25-5.5-4.88-5.5-8.5V6.3l5.5-2.29 5.5 2.29v5.2c0 3.62-2.37 7.25-5.5 8.5z" />
+//     <path d="M12 7.15l-3.5 3.5 1.41 1.41L12 9.97l2.09 2.09 1.41-1.41L12 7.15z" />
+//   </svg>
+// );
 
 // SVG Component for the decorative waves
 const Wave: React.FC<{ className: string; color: string }> = ({
