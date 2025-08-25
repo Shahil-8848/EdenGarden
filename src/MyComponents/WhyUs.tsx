@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
-import Krishna2 from "./Krishna2.jpg";
-import Plus2 from "./Plus2Pics6.jpg";
+import child from "../SchoolPics/edenChildBanner1.jpg";
+import Futsal from "../SchoolPics/Events/WinnerPoet.jpeg";
 export default function ElearningHero() {
   return (
     <div className="w-full max-w-6xl mx-auto p-6 relative">
@@ -11,7 +11,7 @@ export default function ElearningHero() {
           {/* Main image */}
           <div className="relative z-10 rounded-2xl overflow-hidden shadow-lg transform rotate-[-3deg]">
             <img
-              src={Plus2}
+              src={child}
               alt="Smiling woman with glasses"
               className="w-full h-auto"
             />
@@ -30,7 +30,7 @@ export default function ElearningHero() {
           {/* Secondary image */}
           <div className="absolute top-1/4 right-0 w-3/5 rounded-2xl overflow-hidden shadow-lg z-20 transform translate-x-8 translate-y-16">
             <img
-              src={Krishna2}
+              src={Futsal}
               alt="Online learning session"
               className="w-full h-auto"
             />

@@ -227,8 +227,8 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
       <div className="bg-lime-200 text-emerald-800 py-2">
         <div className="container mx-auto px-4">
           <p className="text-sm text-center font-medium">
-            Eden Garden Education Foundation celebrates Krishna Janmashtami this
-            month
+            2nd Terminal Exam Starts from Ashoj, Students are requested to take
+            their Admit card on time
           </p>
         </div>
       </div>

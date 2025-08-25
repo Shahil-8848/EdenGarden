@@ -25,6 +25,7 @@ import Header from "@/MyComponents/Header";
 import edenChildBanner1 from "../SchoolPics/edenChildBanner1.jpg";
 import EdenBanner2 from "../SchoolPics/EdenBanner2.jpg";
 import See from "../SchoolPics/SeeBatch2081.jpg";
+import kidsGroup from "../SchoolPics/kidsGroup.jpg";
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -140,7 +141,7 @@ const HomePage = () => {
               <div className="md:col-span-1">
                 <div className="overflow-hidden rounded-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    src={kidsGroup}
                     alt="School building"
                     className="w-full h-full object-cover"
                   />
@@ -364,7 +365,7 @@ const HomePage = () => {
         </section> */}
 
         {/* Events Section */}
-        <section ref={eventsRef} className="py-12 bg-gray-50">
+        {/* <section ref={eventsRef} className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-800 mb-2">
@@ -395,7 +396,7 @@ const HomePage = () => {
                   </div>
                   <div className="p-4 flex-grow">
                     <h3 className="font-semibold text-lg mb-1">
-                      Krishna Janmashtami
+                      2nd Term Examination
                     </h3>
                     <div className="flex items-center text-gray-500 text-sm mb-2">
                       <svg
@@ -436,7 +437,7 @@ const HomePage = () => {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Testimonials Section */}
         {/* <section ref={testimonialsRef} className="py-12">
