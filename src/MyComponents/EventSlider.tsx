@@ -255,9 +255,7 @@ const CompactEventCard: React.FC<{
         <div className="absolute top-3 left-3 z-20">
           <span
             className={`px-2.5 py-1 text-xs font-semibold rounded-full ${colors.bg} ${colors.text} border ${colors.border} backdrop-blur-sm shadow-sm`}
-          >
-            {event.category}
-          </span>
+          ></span>
         </div>
 
         {/* Image Container */}

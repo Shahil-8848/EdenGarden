@@ -626,7 +626,7 @@ const HomePage = () => {
               </div>
               <div className="space-y-4">
                 <h3 className="text-xl font-bold">Emergency Contact</h3>
-                <p>24/7 Helpline: +977-980-12341547</p>
+                <p>023-530511</p>
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ interface PrincipalData {
 // Sample data
 const principalData: PrincipalData = {
   name: "Mohan Acharya",
-  title: "Principal & Educational Leader",
+  title: "Principal",
   image:
     "https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg",
   message: `Welcome to our extraordinary educational community, where every student's potential is nurtured and celebrated. As we embark on another remarkable academic year, I am filled with immense pride and excitement for the journey ahead.

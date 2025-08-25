@@ -113,6 +113,14 @@ const teachersData: Teacher[] = [
     image: "/api/placeholder/400/400",
     level: "primary",
   },
+  {
+    id: "12",
+    name: "Rupesh Karki",
+    title: "Teacher",
+    subject: "Nepali",
+    image: "/api/placeholder/400/400",
+    level: "secondary",
+  },
 ];
 
 const levelConfig = {

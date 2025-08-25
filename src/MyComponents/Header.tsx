@@ -163,7 +163,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
               </div>
               <div className="hidden sm:flex items-center space-x-1">
                 <Phone size={14} />
-                <span className="text-xs">+1 (555) 123-4567</span>
+                <span className="text-xs">023-530511</span>
               </div>
               <div className="hidden md:flex items-center space-x-1">
                 <Mail size={14} />
