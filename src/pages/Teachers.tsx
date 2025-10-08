@@ -5,6 +5,13 @@ import logo from "../assets/edenLogo.png";
 import Pic1 from "../SchoolPics/Teachers/GitaMiss.jpg";
 import Pic2 from "../SchoolPics/Teachers/RajeshSir.jpg";
 import Pic3 from "../SchoolPics/Teachers/BarshaMiss.jpg";
+import Pic4 from "../SchoolPics/Teachers/KhemSir.jpg";
+import Pic5 from "../SchoolPics/Teachers/GitaRamSir.jpg";
+import Pic6 from "../SchoolPics/Teachers/Madan.png";
+import Pic7 from "../SchoolPics/Teachers/dipjalSir.jpg";
+import Pic8 from "../SchoolPics/Teachers/RupeshSir.jpg";
+import Pic9 from "../SchoolPics/Teachers/kamalSir.jpg";
+import Pic10 from "../SchoolPics/Teachers/PrakashSir.jpg";
 // Register GSAP plugin
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -27,8 +34,7 @@ const teachersData: Teacher[] = [
     name: "Khemraj Sharma Acharya",
     title: "Vice Principal",
     subject: "English",
-    image:
-      "https://scontent.fktm9-2.fna.fbcdn.net/v/t39.30808-1/481240399_592520140281400_3142594933312340788_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeHoq9oZERx5khwINCd4fhw7PT-CmnDapgY9P4KacNqmBr0JYpoCJ3a1meOKf4h3LoiWewxLVxI4QE_0-J3hcJ4_&_nc_ohc=SRLYnODvV-sQ7kNvwFcN9u4&_nc_oc=AdmXP4w5_cVSs0hKBrBbxfaf-WhhSOYAVh9P6mrW1Ig1Uh7lSG-SHed4Xi0y9fE2OhE&_nc_zt=24&_nc_ht=scontent.fktm9-2.fna&_nc_gid=09_0LklcPZTkLTPeDDn1nA&oh=00_AfV55dt-HMMOnl2FDSCfv9XJJIXWZSwhzq-_KndIlSAo_A&oe=68A2545C",
+    image: Pic4,
     level: "higher",
   },
   {
@@ -36,7 +42,7 @@ const teachersData: Teacher[] = [
     name: "Gitaram Acharya",
     title: "Coordinator",
     subject: "Social Studies",
-    image: "/api/placeholder/400/400",
+    image: Pic5,
     level: "higher",
   },
   // Using a more consistent placeholder for other teachers
@@ -45,7 +51,7 @@ const teachersData: Teacher[] = [
     name: "Madan Dhungana",
     title: "H.O.D Science",
     subject: "Physics",
-    image: "/api/placeholder/400/400",
+    image: Pic6,
     level: "higher",
   },
   {
@@ -69,7 +75,7 @@ const teachersData: Teacher[] = [
     name: "Deepjal Banaskota",
     title: "Teacher",
     subject: "Mathematics",
-    image: "/api/placeholder/400/400",
+    image: Pic7,
     level: "higher",
   },
 
@@ -86,7 +92,7 @@ const teachersData: Teacher[] = [
     name: "Prakash Pandey",
     title: "Accountant",
     subject: "Economics",
-    image: "/api/placeholder/400/400",
+    image: Pic10,
     level: "higher",
   },
   {
@@ -116,6 +122,70 @@ const teachersData: Teacher[] = [
   {
     id: "12",
     name: "Rupesh Karki",
+    title: "Teacher",
+    subject: "Nepali",
+    image: Pic8,
+    level: "secondary",
+  },
+  {
+    id: "13",
+    name: "Kamal Adhikari",
+    title: "Teacher",
+    subject: "Nepali",
+    image: Pic9,
+    level: "secondary",
+  },
+  {
+    id: "14",
+    name: "Sushma Mohara",
+    title: "Teacher",
+    subject: "Science",
+    image: "/api/placeholder/400/400",
+    level: "primary",
+  },
+  {
+    id: "15",
+    name: "Tulasha Niroula",
+    title: "Teacher",
+    subject: "English",
+    image: "/api/placeholder/400/400",
+    level: "primary",
+  },
+  {
+    id: "16",
+    name: "Sanjay Rajbanshi",
+    title: "Teacher",
+    subject: "Computer & Health",
+    image: "/api/placeholder/400/400",
+    level: "secondary",
+  },
+  {
+    id: "17",
+    name: "Sikha Bista",
+    title: "Teacher",
+    subject: "E.C.A",
+    image: "/api/placeholder/400/400",
+    level: "primary",
+  },
+  {
+    id: "17",
+    name: "Reema Shah",
+    title: "Teacher",
+    subject: "English",
+    image: "/api/placeholder/400/400",
+    level: "secondary",
+  },
+  {
+    id: "17",
+    name: "Kritika Kattel",
+    title: "Teacher",
+    subject: "English",
+    image: "/api/placeholder/400/400",
+    level: "secondary",
+  },
+  {
+    id: "18",
+    name: "Menuka Siwakoti ",
     title: "Teacher",
     subject: "Nepali",
     image: "/api/placeholder/400/400",
