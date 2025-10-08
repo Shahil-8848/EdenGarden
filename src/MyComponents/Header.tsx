@@ -47,13 +47,13 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
     },
     {
       name: "About",
-      to: "/about",
+      to: ".",
       icon: Info,
       active: window.location.pathname === "/about",
     },
     {
       name: "Academic",
-      to: "/academic",
+      to: ".",
       icon: BookOpen,
       active: window.location.pathname === "/academic",
     },
@@ -71,13 +71,13 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
     },
     {
       name: "Gallery",
-      to: "/gallery",
+      to: ".",
       icon: ImageIcon,
       active: window.location.pathname === "/gallery",
     },
     {
       name: "Contact",
-      to: "/contact",
+      to: ".",
       icon: Phone,
       active: window.location.pathname === "/contact",
     },
