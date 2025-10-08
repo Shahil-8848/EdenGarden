@@ -2,7 +2,7 @@ import type React from "react";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Principal from "../SchoolPics/Teachers/Principal.jpg";
 // Register GSAP plugin
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -29,8 +29,7 @@ interface PrincipalData {
 const principalData: PrincipalData = {
   name: "Mohan Acharya",
   title: "Principal",
-  image:
-    "https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg",
+  image: Principal,
   message: `Welcome to our extraordinary educational community, where every student's potential is nurtured and celebrated. As we embark on another remarkable academic year, I am filled with immense pride and excitement for the journey ahead.
 
 Our school stands as a beacon of excellence, innovation, and inclusivity. We believe that education extends far beyond textbooks and classrooms—it's about fostering critical thinking, creativity, and character development that will serve our students throughout their lives.
@@ -315,7 +314,7 @@ const PrincipalMessage: React.FC = () => {
                   <img
                     src={principalData.image || "/placeholder.svg"}
                     alt={principalData.name}
-                    className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                 </div>
