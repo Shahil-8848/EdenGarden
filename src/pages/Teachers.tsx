@@ -12,7 +12,7 @@ import Pic7 from "../SchoolPics/Teachers/dipjalSir.jpg";
 import Pic8 from "../SchoolPics/Teachers/RupeshSir.jpg";
 import Pic9 from "../SchoolPics/Teachers/kamalSir.jpg";
 import Pic10 from "../SchoolPics/Teachers/PrakashSir.jpg";
-import Pic11 from "../SchoolPics/Teachers/Shahil.jpeg";
+import Pic11 from "../SchoolPics/Teachers/shahilSir.png";
 // Register GSAP plugin
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);

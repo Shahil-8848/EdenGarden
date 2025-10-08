@@ -19,7 +19,7 @@ import {
   Bell,
 } from "lucide-react";
 import { gsap } from "gsap";
-import logo from "../SchoolPics/logo.png";
+import logo from "../SchoolPics/logo-removebg-preview.png";
 // Placeholder for logo - replace with your actual logo import
 const edenLogo = logo;
 
