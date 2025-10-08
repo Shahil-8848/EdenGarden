@@ -19,13 +19,17 @@ import EventSlider from "@/MyComponents/EventSlider";
 import PrincipalMessage from "@/MyComponents/MsgFromPrincipal";
 // import HouseCap7 from "../../public/SchoolPics/HouseCap7.jpg";
 import votecl from "../SchoolPics/votecl-8.jpg";
-import kidsBanner from "../SchoolPics/kidsGroup.jpg";
+
 import BannerSlider from "@/MyComponents/BannerSlider";
 import Header from "@/MyComponents/Header";
 import edenChildBanner1 from "../SchoolPics/edenChildBanner1.jpg";
+import Ncc from "../SchoolPics/Ncc.jpg";
+import GirlScout from "../SchoolPics/GirlScout.jpg";
+import Tour from "../SchoolPics/Teachers/refreshmentTour.jpg";
+import teacher from "../SchoolPics/Teachers/teacherGroupL.jpg";
 import EdenBanner2 from "../SchoolPics/EdenBanner2.jpg";
 import See from "../SchoolPics/SeeBatch2081.jpg";
-import kidsGroup from "../SchoolPics/kidsGroup.jpg";
+
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +43,16 @@ const HomePage = () => {
 
   // Banner slider state and data
 
-  const bannerImages = [See, edenChildBanner1, kidsBanner, EdenBanner2, votecl];
+  const bannerImages = [
+    See,
+    Tour,
+    teacher,
+    edenChildBanner1,
+    EdenBanner2,
+    Ncc,
+    GirlScout,
+    votecl,
+  ];
 
   // // Function to navigate to next slide
   // const nextSlide = () => {
@@ -141,9 +154,9 @@ const HomePage = () => {
               <div className="md:col-span-1">
                 <div className="overflow-hidden rounded-lg">
                   <img
-                    src={kidsGroup}
+                    src={See}
                     alt="School building"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-fill"
                   />
                 </div>
               </div>

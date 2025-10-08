@@ -16,9 +16,13 @@ import {
   Mail,
   MapPin,
   Info,
+  Bell,
 } from "lucide-react";
 import { gsap } from "gsap";
-import edenLogo from "../../src/assets/edenLogo.png";
+import logo from "../SchoolPics/logo.png";
+// Placeholder for logo - replace with your actual logo import
+const edenLogo = logo;
+
 interface HeaderProps {
   primaryColor?: string;
 }
@@ -32,6 +36,7 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
   const overlayRef = useRef<HTMLDivElement>(null);
   const menuItemsRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
+  const marqueeRef = useRef<HTMLDivElement>(null);
 
   const navigationItems = [
     {
@@ -78,10 +83,16 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
     },
   ];
 
+  const notices = [
+    "2nd Terminal Examination Result is Happening this 31st of Ashoj",
+    "Parent-Teacher Meeting scheduled for this Exam day",
+    "Students are requested to attent the school",
+    "Tihar Holiday Starts After Results",
+  ];
+
   // Handle scroll effect and sticky header
   useEffect(() => {
     const handleScroll = () => {
-      // Only consider it scrolled after passing the contact and alert bars
       const scrollThreshold = 80;
       setIsScrolled(window.scrollY > scrollThreshold);
     };
@@ -90,10 +101,32 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Marquee animation
+  useEffect(() => {
+    if (marqueeRef.current) {
+      const marqueeContent = marqueeRef.current;
+      const clone = marqueeContent.cloneNode(true) as HTMLElement;
+      marqueeContent.parentElement?.appendChild(clone);
+
+      gsap.to(marqueeContent, {
+        x: "-100%",
+        duration: 30,
+        ease: "none",
+        repeat: -1,
+      });
+
+      gsap.to(clone, {
+        x: "-100%",
+        duration: 30,
+        ease: "none",
+        repeat: -1,
+      });
+    }
+  }, []);
+
   // Mobile menu animations
   useEffect(() => {
     if (isMobileMenuOpen) {
-      // Open animation
       if (mobileMenuRef.current && overlayRef.current && menuItemsRef.current) {
         gsap.set(mobileMenuRef.current, { x: "100%" });
         gsap.set(overlayRef.current, { opacity: 0 });
@@ -119,7 +152,6 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
           );
       }
     } else {
-      // Close animation
       if (mobileMenuRef.current && overlayRef.current && menuItemsRef.current) {
         const tl = gsap.timeline();
         tl.to(menuItemsRef.current.children, {
@@ -152,25 +184,29 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
       {/* Contact Bar */}
       <div
         style={{ backgroundColor: primaryColor }}
-        className="text-white py-2"
+        className="text-white py-2.5"
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center">
-            <div className="flex flex-wrap items-center space-x-2 md:space-x-6">
-              <div className="flex items-center space-x-1">
-                <MapPin size={14} />
-                <span className="text-xs">Birtamode-4, Jhapa, Nepal</span>
+            <div className="flex flex-wrap items-center gap-3 md:gap-6">
+              <div className="flex items-center gap-2">
+                <MapPin size={14} className="flex-shrink-0" />
+                <span className="text-xs md:text-sm">
+                  Birtamode-4, Jhapa, Nepal
+                </span>
               </div>
-              <div className="hidden sm:flex items-center space-x-1">
-                <Phone size={14} />
-                <span className="text-xs">023-530511</span>
+              <div className="flex items-center gap-2">
+                <Phone size={14} className="flex-shrink-0" />
+                <span className="text-xs md:text-sm">023-530511</span>
               </div>
-              <div className="hidden md:flex items-center space-x-1">
-                <Mail size={14} />
-                <span className="text-xs">edengarden169@gmail.com</span>
+              <div className="hidden lg:flex items-center gap-2">
+                <Mail size={14} className="flex-shrink-0" />
+                <span className="text-xs md:text-sm">
+                  edengarden169@gmail.com
+                </span>
               </div>
             </div>
-            <div className="hidden sm:flex items-center space-x-4">
+            <div className="hidden md:flex items-center gap-4">
               <a
                 href="#"
                 className="text-white hover:text-white/80 transition-colors"
@@ -223,49 +259,100 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Alert Bar */}
-      <div className="bg-lime-200 text-emerald-800 py-2">
+      {/* Enhanced Notice Bar with Marquee */}
+      <div className="bg-gradient-to-r from-emerald-50 via-green-50 to-emerald-50 border-y border-emerald-200 py-3 overflow-hidden">
         <div className="container mx-auto px-4">
-          <p className="text-sm text-center font-medium">
-            2nd Terminal Exam Starts from Ashoj, Students are requested to take
-            their Admit card on time
-          </p>
+          <div className="flex items-center gap-4">
+            {/* Static Notice Label */}
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center shadow-md">
+                <Bell size={16} className="text-white animate-pulse" />
+              </div>
+              <span className="text-sm font-bold text-emerald-800 tracking-wide whitespace-nowrap">
+                NOTICES
+              </span>
+              <div className="w-px h-6 bg-emerald-300 ml-2"></div>
+            </div>
+
+            {/* Marquee Container */}
+            <div className="flex-1 overflow-hidden relative">
+              <div className="flex gap-8" style={{ whiteSpace: "nowrap" }}>
+                <div ref={marqueeRef} className="flex gap-8 items-center">
+                  {notices.map((notice, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 flex-shrink-0 shadow-sm"></div>
+                      <span className="text-sm font-medium text-emerald-900">
+                        {notice}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Main Header - Now with sticky functionality */}
+      {/* Main Header - Enhanced Glassmorphic Design */}
       <div
         ref={headerRef}
-        className=" z-40 transition-all duration-300 bg-white"
+        className="z-40 transition-all duration-300"
         style={{
           position: "sticky",
           top: 0,
-          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.1) " : "none",
+          background: isScrolled
+            ? "rgba(255, 255, 255, 0.95)"
+            : "rgba(255, 255, 255, 0.98)",
+          backdropFilter: "blur(12px)",
+          boxShadow: isScrolled
+            ? "0 8px 32px rgba(5, 150, 105, 0.15)"
+            : "0 2px 8px rgba(0, 0, 0, 0.05)",
         }}
       >
         <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-3">
           <div
-            className={`border border-gray-200/60 rounded-xl bg-gray-100 backdrop-blur-sm transition-all duration-300 ${
-              isScrolled ? "shadow-lg  shadow-emerald-200/30" : "shadow-md"
-            }`}
+            className="rounded-2xl transition-all duration-300 overflow-hidden"
+            style={{
+              background: `linear-gradient(to right, 
+                rgba(6, 95, 70, 0.15) 0%, 
+                rgba(4, 120, 87, 0.12) 25%,
+                rgba(5, 150, 105, 0.10) 50%,
+                rgba(4, 120, 87, 0.12) 75%,
+                rgba(6, 95, 70, 0.15) 100%)`,
+              backgroundColor: "rgba(240, 253, 250, 0.8)",
+              backdropFilter: "blur(20px)",
+              border: "1px solid rgba(6, 95, 70, 0.15)",
+              boxShadow: isScrolled
+                ? "0 4px 20px rgba(6, 95, 70, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5)"
+                : "0 2px 10px rgba(6, 95, 70, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.5)",
+            }}
           >
             <div className="flex justify-between items-center py-3 md:py-4 px-4 md:px-6">
               {/* Logo Section */}
-              <div className="flex items-center space-x-3 md:space-x-4">
-                <div className="w-18 h-18 md:w-16 md:h-16 rounded-full flex items-center justify-center overflow-hidden ring-2 ring-white shadow-lg">
-                  <img
-                    src={edenLogo}
-                    alt="Eden Garden Education Foundation Logo"
-                    className="w-12 h-13"
-                  />
+              <div className="flex items-center gap-3 md:gap-4">
+                <div
+                  className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+                    padding: "3px",
+                  }}
+                >
+                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+                    <img
+                      src={edenLogo}
+                      alt="Eden Garden Education Foundation Logo"
+                      className="w-10 h-10 md:w-12 md:h-12 object-contain"
+                    />
+                  </div>
                 </div>
                 <div className="flex-1 min-w-0">
                   <h1
-                    className="text-lg sm:text-xl md:text-2xl font-bold leading-tight"
+                    className="text-base sm:text-lg md:text-2xl font-bold leading-tight"
                     style={{
                       fontFamily: "'Playfair Display', 'Georgia', serif",
                       letterSpacing: "0.01em",
-                      background: `linear-gradient(135deg, ${primaryColor} 0%, #34d399 50%, #047857 100%)`,
+                      background: `linear-gradient(135deg, ${primaryColor} 0%, #10b981 50%, #047857 100%)`,
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
@@ -278,10 +365,15 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                     <span className="sm:hidden">Eden Garden</span>
                   </h1>
                   <p
-                    className="text-xs md:text-sm text-gray-600 font-medium"
+                    className="text-xs md:text-sm font-semibold mt-0.5"
                     style={{
                       fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       letterSpacing: "0.02em",
+                      background:
+                        "linear-gradient(90deg, #059669 0%, #10b981 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
                     }}
                   >
                     Igniting Young Minds
@@ -289,27 +381,30 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                 </div>
               </div>
 
-              {/* Desktop Navigation - Using React Router Link components */}
-              <nav className="hidden lg:flex items-center space-x-8">
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex items-center gap-1">
                 {navigationItems.map((item) => (
                   <Link
                     key={item.name}
                     to={item.to}
-                    className={`group relative text-sm font-semibold transition-all duration-300 ${
+                    className={`group relative px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
                       item.active
-                        ? "text-emerald-600"
+                        ? "text-emerald-700"
                         : "text-gray-700 hover:text-emerald-600"
                     }`}
                     style={{
                       fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       letterSpacing: "0.01em",
                       textDecoration: "none",
+                      background: item.active
+                        ? "rgba(5, 150, 105, 0.1)"
+                        : "transparent",
                     }}
                   >
                     {item.name}
                     <span
-                      className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-600 transition-all duration-300 ${
-                        item.active ? "w-full" : "w-0 group-hover:w-full"
+                      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-emerald-500 to-green-500 transition-all duration-300 rounded-full ${
+                        item.active ? "w-3/4" : "w-0 group-hover:w-3/4"
                       }`}
                     />
                   </Link>
@@ -319,10 +414,15 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
               {/* Mobile Menu Button */}
               <button
                 onClick={toggleMobileMenu}
-                className="lg:hidden w-10 h-10 rounded-lg bg-gray-50 hover:bg-gray-100 flex items-center justify-center transition-colors duration-200 border border-gray-200"
+                className="lg:hidden w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg"
                 aria-label="Toggle mobile menu"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(16, 185, 129, 0.15) 100%)",
+                  border: "1px solid rgba(5, 150, 105, 0.2)",
+                }}
               >
-                <Menu size={20} className="text-gray-700" />
+                <Menu size={22} className="text-emerald-700" />
               </button>
             </div>
           </div>
@@ -340,27 +440,41 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
         onClick={closeMobileMenu}
       />
 
-      {/* Mobile Menu Slider */}
+      {/* Mobile Menu Slider - Enhanced */}
       <div
         ref={mobileMenuRef}
         className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-50 lg:hidden shadow-2xl transform translate-x-full"
       >
         {/* Mobile Menu Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-100 bg-gradient-to-r from-emerald-50 to-green-50">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden ring-2 ring-white shadow-md">
-              <img
-                src={edenLogo}
-                alt="Logo"
-                className="w-full h-full object-cover"
-              />
+        <div
+          className="flex items-center justify-between p-5 border-b border-emerald-100"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(236, 253, 245, 1) 0%, rgba(209, 250, 229, 1) 100%)",
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <div
+              className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shadow-md"
+              style={{
+                background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+                padding: "2px",
+              }}
+            >
+              <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+                <img
+                  src={edenLogo}
+                  alt="Logo"
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
             </div>
             <div>
               <h2
-                className="text-lg font-bold"
+                className="text-base font-bold"
                 style={{
                   fontFamily: "'Playfair Display', 'Georgia', serif",
-                  background: `linear-gradient(135deg, ${primaryColor} 0%, #34d399 50%, #047857 100%)`,
+                  background: `linear-gradient(135deg, ${primaryColor} 0%, #10b981 100%)`,
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -369,8 +483,11 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                 Eden Garden
               </h2>
               <p
-                className="text-xs text-gray-600"
-                style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}
+                className="text-xs font-semibold"
+                style={{
+                  fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                  color: "#059669",
+                }}
               >
                 Education Foundation
               </p>
@@ -378,18 +495,25 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
           </div>
           <button
             onClick={closeMobileMenu}
-            className="w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-colors duration-200 shadow-sm"
+            className="w-9 h-9 rounded-full flex items-center justify-center transition-colors duration-200 shadow-sm"
             aria-label="Close menu"
+            style={{
+              background: "rgba(255, 255, 255, 0.9)",
+              border: "1px solid rgba(5, 150, 105, 0.2)",
+            }}
           >
-            <X size={18} className="text-gray-600" />
+            <X size={18} className="text-emerald-700" />
           </button>
         </div>
 
-        {/* Mobile Menu Items - Using React Router Link components */}
-        <div ref={menuItemsRef} className="py-6">
-          <div className="px-6 mb-4">
+        {/* Mobile Menu Items */}
+        <div
+          ref={menuItemsRef}
+          className="py-4 overflow-y-auto h-[calc(100%-180px)]"
+        >
+          <div className="px-5 mb-3">
             <p
-              className="text-xs font-semibold text-gray-500 uppercase tracking-wider"
+              className="text-xs font-bold text-emerald-700 uppercase tracking-wider"
               style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}
             >
               Navigation
@@ -403,25 +527,25 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
                 key={item.name}
                 to={item.to}
                 onClick={closeMobileMenu}
-                className={`group flex items-center justify-between px-6 py-4 transition-all duration-300 ${
+                className={`group flex items-center justify-between px-5 py-3.5 transition-all duration-300 ${
                   item.active
-                    ? "bg-emerald-50 border-r-4 border-emerald-500"
-                    : "hover:bg-gray-50"
+                    ? "bg-gradient-to-r from-emerald-50 to-green-50 border-r-4 border-emerald-500"
+                    : "hover:bg-emerald-50/50"
                 }`}
                 style={{ textDecoration: "none" }}
               >
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center gap-3">
                   <div
-                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-300 ${
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm ${
                       item.active
-                        ? "bg-emerald-100 text-emerald-600"
-                        : "bg-gray-100 text-gray-600 group-hover:bg-emerald-50 group-hover:text-emerald-600"
+                        ? "bg-gradient-to-br from-emerald-500 to-green-600 text-white scale-105"
+                        : "bg-emerald-100 text-emerald-600 group-hover:bg-emerald-200"
                     }`}
                   >
                     <IconComponent size={18} />
                   </div>
                   <span
-                    className={`font-semibold transition-colors duration-300 ${
+                    className={`font-semibold text-sm transition-colors duration-300 ${
                       item.active
                         ? "text-emerald-700"
                         : "text-gray-700 group-hover:text-emerald-600"
@@ -444,33 +568,33 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
           })}
 
           {/* Mobile Contact Info */}
-          <div className="mt-8 px-6">
+          <div className="mt-6 px-5">
             <p
-              className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4"
+              className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3"
               style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}
             >
               Contact Us
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
-                  <MapPin size={16} />
+            <div className="space-y-2.5">
+              <div className="flex items-start gap-3 p-2.5 rounded-lg bg-emerald-50/50">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-white flex-shrink-0 shadow-sm">
+                  <MapPin size={14} />
                 </div>
-                <span className="text-sm text-gray-700">
+                <span className="text-xs text-gray-700 leading-relaxed">
                   Birtamode-4, Jhapa, Nepal
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
-                  <Phone size={16} />
+              <div className="flex items-center gap-3 p-2.5 rounded-lg bg-emerald-50/50">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-white flex-shrink-0 shadow-sm">
+                  <Phone size={14} />
                 </div>
-                <span className="text-sm text-gray-700">+1 (555) 123-4567</span>
+                <span className="text-xs text-gray-700">023-530511</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
-                  <Mail size={16} />
+              <div className="flex items-start gap-3 p-2.5 rounded-lg bg-emerald-50/50">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-white flex-shrink-0 shadow-sm">
+                  <Mail size={14} />
                 </div>
-                <span className="text-sm text-gray-700">
+                <span className="text-xs text-gray-700 break-all leading-relaxed">
                   edengarden169@gmail.com
                 </span>
               </div>
@@ -479,15 +603,21 @@ const ProfessionalHeader: React.FC<HeaderProps> = ({
         </div>
 
         {/* Mobile Menu Footer */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-gray-50 to-transparent">
+        <div
+          className="absolute bottom-0 left-0 right-0 p-5"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(236, 253, 245, 1) 0%, rgba(236, 253, 245, 0) 100%)",
+          }}
+        >
           <div className="text-center">
             <p
-              className="text-xs text-gray-500 mb-2"
+              className="text-xs font-medium text-emerald-700 mb-2"
               style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}
             >
               Nurturing minds, shaping futures
             </p>
-            <div className="w-12 h-1 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full mx-auto" />
+            <div className="w-16 h-1 bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-400 rounded-full mx-auto shadow-sm" />
           </div>
         </div>
       </div>
