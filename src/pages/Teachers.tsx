@@ -73,7 +73,7 @@ const teachersData: Teacher[] = [
   },
   {
     id: "4",
-    name: "Deepjal Banaskota",
+    name: "Dipjwal Banskota",
     title: "Teacher",
     subject: "Mathematics",
     image: Pic7,
@@ -106,7 +106,7 @@ const teachersData: Teacher[] = [
   },
   {
     id: "10",
-    name: "Geeta Baskota",
+    name: "Geeta Bastola",
     title: "Teacher",
     subject: "Nepali",
     image: Pic1,
