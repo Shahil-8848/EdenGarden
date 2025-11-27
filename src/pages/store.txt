@@ -1,0 +1,190 @@
+const blogPosts: BlogPost[] = [
+  {
+    id: "1",
+    title: "The Future of Education: How AI is Transforming Learning",
+    slug: "future-education-ai-transforming-learning",
+    excerpt:
+      "Discover how artificial intelligence is revolutionizing the classroom experience, creating personalized learning paths, and preparing students for tomorrow's challenges.",
+    content:
+      "Artificial Intelligence is no longer a concept confined to science fiction movies. Today, it's actively reshaping how we learn, teach, and interact with educational content. From personalized learning algorithms to intelligent tutoring systems, AI is creating unprecedented opportunities for students to excel in their academic journey.",
+    fullContent: `Artificial Intelligence is no longer a concept confined to science fiction movies. Today, it's actively reshaping how we learn, teach, and interact with educational content. From personalized learning algorithms to intelligent tutoring systems, AI is creating unprecedented opportunities for students to excel in their academic journey.
+
+## The Current State of AI in Education
+
+Our school has been at the forefront of integrating AI technologies into the classroom. We've implemented adaptive learning platforms that adjust to each student's pace and learning style. These systems analyze how students interact with content, identifying areas where they struggle and providing additional resources automatically.
+
+## Personalized Learning Paths
+
+One of the most exciting developments is the creation of personalized learning paths. AI algorithms analyze student performance data to create customized curricula that adapt in real-time. This means that if a student excels in mathematics but struggles with literature, the system can provide more challenging math problems while offering additional support for reading comprehension.
+
+## Intelligent Tutoring Systems
+
+Our AI-powered tutoring systems provide 24/7 support to students. These systems can answer questions, provide explanations, and even generate practice problems tailored to individual needs. The technology has proven particularly effective in subjects like mathematics and science, where step-by-step problem-solving is crucial.
+
+## Preparing for the Future
+
+As we look ahead, it's clear that AI literacy will be as important as traditional literacy. Our school is preparing students not just to use AI tools, but to understand how they work and how to develop them. We've introduced coding classes that focus on machine learning and data science, giving students the skills they'll need in tomorrow's job market.
+
+## Challenges and Considerations
+
+While AI offers tremendous opportunities, we must also address the challenges it presents. Privacy concerns, the digital divide, and the need for human connection in education are all important considerations. Our approach has been to use AI as a tool to enhance human teaching, not replace it.
+
+The future of education is bright, and AI is helping us create learning experiences that are more personalized, engaging, and effective than ever before. As students, we have the opportunity to be part of this transformation and help shape how future generations will learn.`,
+    coverImage:
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
+    date: "May 15, 2024",
+    readTime: "8 min read",
+    featured: true,
+    categories: ["Technology", "Education", "Innovation"],
+    author: {
+      name: "Ankit Karki",
+      avatar:
+        "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/465128776_9061754170521479_2687488796146001787_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GyxHUqmxcfIQ7kNvwEi7flc&_nc_oc=Adn0zhhfWIsMMiMn8KJZ989r1smPWmwv-ZskGLQFlkI1XMO9N54Hryu7yZBrXxecafk&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=PSV1PUsDnGFrE_MUa0YO4w&oh=00_AfK9I3ykqrVVaJXuC-YE3QnR8H0bYLDwlovi6S2jkMFcvQ&oe=68408D52",
+      grade: "10th Grade",
+    },
+  },
+  {
+    id: "2",
+    title: "Sustainability in Action: Our School's Green Revolution",
+    slug: "sustainability-action-school-green-revolution",
+    excerpt:
+      "Join us on our journey to create a more sustainable campus. From solar panels to zero-waste initiatives, see how students are leading environmental change.",
+    content:
+      "Our school's commitment to sustainability goes beyond just talking about environmental issues – we're taking concrete action to create a greener, more sustainable campus. Over the past year, our student-led environmental committee has implemented numerous initiatives that have significantly reduced our carbon footprint.",
+    fullContent: `Our school's commitment to sustainability goes beyond just talking about environmental issues – we're taking concrete action to create a greener, more sustainable campus. Over the past year, our student-led environmental committee has implemented numerous initiatives that have significantly reduced our carbon footprint.
+
+## Solar Power Initiative
+
+The most visible change on our campus is the installation of solar panels on the main building's roof. This project, which was proposed and advocated for by students, now provides 40% of our school's electricity needs. The panels not only reduce our environmental impact but also serve as a real-world learning tool for our physics and environmental science classes.
+
+## Zero-Waste Cafeteria Program
+
+Our cafeteria has undergone a complete transformation. We've eliminated single-use plastics, implemented a comprehensive composting program, and partnered with local farms to source organic, locally-grown ingredients. Students now bring reusable containers, and any food waste is composted and used in our school garden.
+
+## Green Transportation
+
+We've launched a bike-to-school program that has reduced car traffic by 30%. The school installed secure bike racks and created safe cycling routes. Additionally, we've organized carpooling networks and advocated for better public transportation connections to our campus.
+
+## Campus Garden and Biodiversity
+
+Our school garden has become a centerpiece of our sustainability efforts. Students grow vegetables that are used in the cafeteria, and we've created habitats for local wildlife. The garden serves as an outdoor classroom where students learn about ecology, botany, and sustainable agriculture.
+
+## Energy Conservation
+
+Through student-led awareness campaigns, we've reduced our energy consumption by 25%. Simple actions like turning off lights, using natural lighting when possible, and optimizing heating and cooling systems have made a significant impact.
+
+## Student Leadership
+
+What makes our sustainability program special is that it's entirely student-driven. Our environmental committee meets weekly to plan new initiatives, monitor our progress, and educate the school community about environmental issues. We've proven that young people can be powerful agents of change.
+
+## Looking Forward
+
+Our next goals include achieving carbon neutrality by 2026, expanding our renewable energy capacity, and creating partnerships with other schools to share our sustainability model. We believe that environmental education and action should be at the heart of every school's mission.
+
+The green revolution at our school shows that sustainability isn't just about the future – it's about the actions we take today. Every student has the power to make a difference, and together, we're creating a more sustainable world.`,
+    coverImage:
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=600&fit=crop",
+    date: "April 28, 2024",
+    readTime: "6 min read",
+    featured: true,
+    categories: ["Environment", "Student Projects", "Sustainability"],
+    author: {
+      name: "Soniya Subba",
+      avatar:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      grade: "11th Grade",
+    },
+  },
+  {
+    id: "3",
+    title: "The Science of Memory: Unlocking Better Study Techniques",
+    slug: "science-memory-unlocking-study-techniques",
+    excerpt:
+      "Explore neuroscience-backed strategies that can transform your learning experience and boost academic performance.",
+    content:
+      "Understanding how memory works can revolutionize your study habits and academic performance.",
+    fullContent:
+      "Understanding how memory works can revolutionize your study habits and academic performance. Through neuroscience research, we now know specific techniques that can dramatically improve retention and recall.",
+    coverImage:
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
+    date: "April 10, 2024",
+    readTime: "7 min read",
+    featured: false,
+    categories: ["Academic", "Psychology", "Study Tips"],
+    author: {
+      name: "Krishna Raut",
+      avatar:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      grade: "7th Grade",
+    },
+  },
+  {
+    id: "4",
+    title: "Championship Dreams: Our Basketball Team's Inspiring Journey",
+    slug: "championship-dreams-basketball-team-journey",
+    excerpt:
+      "Follow our team's incredible path to victory, filled with challenges, teamwork, and unforgettable moments.",
+    content:
+      "Our basketball team's journey to the state championship was filled with challenges, growth, and incredible teamwork.",
+    fullContent:
+      "Our basketball team's journey to the state championship was filled with challenges, growth, and incredible teamwork that brought our entire school community together.",
+    coverImage:
+      "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=600&fit=crop",
+    date: "March 22, 2024",
+    readTime: "5 min read",
+    featured: false,
+    categories: ["Sports", "School Events", "Teamwork"],
+    author: {
+      name: "James Rodriguez",
+      avatar:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+      grade: "12th Grade",
+    },
+  },
+  {
+    id: "5",
+    title: "Digital Storytelling: The Evolution of Student Journalism",
+    slug: "digital-storytelling-evolution-student-journalism",
+    excerpt:
+      "How modern technology is empowering student voices and creating new opportunities for authentic storytelling.",
+    content:
+      "Student journalism is evolving rapidly with new digital tools and platforms.",
+    fullContent:
+      "Student journalism is evolving rapidly with new digital tools and platforms that allow for more creative and impactful storytelling than ever before.",
+    coverImage:
+      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=600&fit=crop",
+    date: "March 8, 2024",
+    readTime: "6 min read",
+    featured: false,
+    categories: ["Journalism", "Technology", "Media"],
+    author: {
+      name: "Aisha Patel",
+      avatar:
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+      grade: "11th Grade",
+    },
+  },
+  {
+    id: "6",
+    title: "Art as Identity: Celebrating Cultural Diversity Through Creativity",
+    slug: "art-identity-celebrating-cultural-diversity",
+    excerpt:
+      "Our multicultural art exhibition showcases the beautiful tapestry of student heritage and creative expression.",
+    content:
+      "Art has always been a powerful medium for expressing identity and culture.",
+    fullContent:
+      "Art has always been a powerful medium for expressing identity and culture, and our recent multicultural exhibition demonstrated the incredible diversity within our school community.",
+    coverImage:
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop",
+    date: "February 14, 2024",
+    readTime: "4 min read",
+    featured: false,
+    categories: ["Arts", "Culture", "Diversity"],
+    author: {
+      name: "David Kim",
+      avatar:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+      grade: "9th Grade",
+    },
+  },
+];

@@ -11,9 +11,13 @@ import Pic6 from "../SchoolPics/Teachers/Madan.png";
 import Pic7 from "../SchoolPics/Teachers/dipjalSir.jpg";
 import Pic8 from "../SchoolPics/Teachers/RupeshSir.jpg";
 import Pic9 from "../SchoolPics/Teachers/kamalSir.jpg";
-import Pic10 from "../SchoolPics/Teachers/PrakashSir.jpg";
+import Pic10 from "../SchoolPics/Teachers/Prakash.png";
 import Pic11 from "../SchoolPics/Teachers/shahilSir.png";
-// Register GSAP plugin
+import Pic12 from "../SchoolPics/Teachers/Dipjwal.jpg";
+import Pic13 from "../SchoolPics/Teachers/MonikaMiss.jpg";
+import Pic14 from "../SchoolPics/Teachers/RemaMiss.jpg";
+import Pic15 from "../SchoolPics/Teachers/TulashaMiss.jpg";
+import Pic16 from "../SchoolPics/Teachers/MenukaMiss.jpg";
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -76,7 +80,7 @@ const teachersData: Teacher[] = [
     name: "Dipjwal Banskota",
     title: "Teacher",
     subject: "Mathematics",
-    image: Pic7,
+    image: Pic12,
     level: "higher",
   },
 
@@ -100,8 +104,8 @@ const teachersData: Teacher[] = [
     id: "9",
     name: "Monika Giri",
     title: "Teacher",
-    subject: "Aacharan",
-    image: "/api/placeholder/400/400",
+    subject: "Maths",
+    image: Pic13,
     level: "primary",
   },
   {
@@ -149,7 +153,7 @@ const teachersData: Teacher[] = [
     name: "Tulasha Niroula",
     title: "Teacher",
     subject: "English",
-    image: "/api/placeholder/400/400",
+    image: Pic15,
     level: "primary",
   },
   {
@@ -162,7 +166,7 @@ const teachersData: Teacher[] = [
   },
   {
     id: "17",
-    name: "Sikha Bista",
+    name: "Shikha Dahal",
     title: "Teacher",
     subject: "E.C.A",
     image: "/api/placeholder/400/400",
@@ -173,7 +177,7 @@ const teachersData: Teacher[] = [
     name: "Reema Shah",
     title: "Teacher",
     subject: "English",
-    image: "/api/placeholder/400/400",
+    image: Pic14,
     level: "secondary",
   },
   {
@@ -189,7 +193,7 @@ const teachersData: Teacher[] = [
     name: "Menuka Siwakoti ",
     title: "Teacher",
     subject: "Nepali",
-    image: "/api/placeholder/400/400",
+    image: Pic16,
     level: "secondary",
   },
 ];

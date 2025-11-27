@@ -13,7 +13,7 @@ if (typeof window !== "undefined") {
 // Types
 interface Author {
   name: string;
-  avatar: string;
+  // avatar: string;
   grade?: string;
 }
 
@@ -21,7 +21,7 @@ interface BlogPost {
   id: string;
   title: string;
   slug: string;
-  excerpt: string;
+
   content: string;
   fullContent: string;
   coverImage: string;
@@ -36,120 +36,68 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: "1",
-    title: "The Future of Education: How AI is Transforming Learning",
+    title: "The beaty of being yourself",
     slug: "future-education-ai-transforming-learning",
-    excerpt:
-      "Discover how artificial intelligence is revolutionizing the classroom experience, creating personalized learning paths, and preparing students for tomorrow's challenges.",
-    content:
-      "Artificial Intelligence is no longer a concept confined to science fiction movies. Today, it's actively reshaping how we learn, teach, and interact with educational content. From personalized learning algorithms to intelligent tutoring systems, AI is creating unprecedented opportunities for students to excel in their academic journey.",
-    fullContent: `Artificial Intelligence is no longer a concept confined to science fiction movies. Today, it's actively reshaping how we learn, teach, and interact with educational content. From personalized learning algorithms to intelligent tutoring systems, AI is creating unprecedented opportunities for students to excel in their academic journey.
 
-## The Current State of AI in Education
-
-Our school has been at the forefront of integrating AI technologies into the classroom. We've implemented adaptive learning platforms that adjust to each student's pace and learning style. These systems analyze how students interact with content, identifying areas where they struggle and providing additional resources automatically.
-
-## Personalized Learning Paths
-
-One of the most exciting developments is the creation of personalized learning paths. AI algorithms analyze student performance data to create customized curricula that adapt in real-time. This means that if a student excels in mathematics but struggles with literature, the system can provide more challenging math problems while offering additional support for reading comprehension.
-
-## Intelligent Tutoring Systems
-
-Our AI-powered tutoring systems provide 24/7 support to students. These systems can answer questions, provide explanations, and even generate practice problems tailored to individual needs. The technology has proven particularly effective in subjects like mathematics and science, where step-by-step problem-solving is crucial.
-
-## Preparing for the Future
-
-As we look ahead, it's clear that AI literacy will be as important as traditional literacy. Our school is preparing students not just to use AI tools, but to understand how they work and how to develop them. We've introduced coding classes that focus on machine learning and data science, giving students the skills they'll need in tomorrow's job market.
-
-## Challenges and Considerations
-
-While AI offers tremendous opportunities, we must also address the challenges it presents. Privacy concerns, the digital divide, and the need for human connection in education are all important considerations. Our approach has been to use AI as a tool to enhance human teaching, not replace it.
-
-The future of education is bright, and AI is helping us create learning experiences that are more personalized, engaging, and effective than ever before. As students, we have the opportunity to be part of this transformation and help shape how future generations will learn.`,
+    content: `In this world, everyone is trying to copy someone else. We see people on social media, in school and even in movies and we start thinking we have to be like them to be loved or accepted. But the truth is the most beautiful thing you can ever be is 'yourself'.
+Each one of us is unique. We all have different talents dreams and stories. When we try to be someone else but that different talents, stories and thoughts that make us who we are.
+Being yourself means accepting who you are and being proud of it. When we try to be someone we lose our real identity. But when we are true to ourself, we feel happy and confident.
+So let's stop conmparing ourself with others and start loving who we are. Remember, you were born to stand out not to fit
+`,
+    fullContent: `In this world, everyone is trying to copy someone else. We see people on social media, in school and even in movies and we start thinking we have to be like them to be loved or accepted. But the truth is the most beautiful thing you can ever be is 'yourself'.`,
     coverImage:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
-    date: "May 15, 2024",
+      "https://www.sisterandsoul.com.au/cdn/shop/articles/carolina-heza-zwPYmB1GlNE-unsplash_1024x.jpg?v=1696811119",
+    date: "November 11, 2025",
     readTime: "8 min read",
     featured: true,
-    categories: ["Technology", "Education", "Innovation"],
+    categories: ["Personal", "Health"],
     author: {
-      name: "Ankit Karki",
-      avatar:
-        "https://scontent.fbir7-1.fna.fbcdn.net/v/t39.30808-6/465128776_9061754170521479_2687488796146001787_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GyxHUqmxcfIQ7kNvwEi7flc&_nc_oc=Adn0zhhfWIsMMiMn8KJZ989r1smPWmwv-ZskGLQFlkI1XMO9N54Hryu7yZBrXxecafk&_nc_zt=23&_nc_ht=scontent.fbir7-1.fna&_nc_gid=PSV1PUsDnGFrE_MUa0YO4w&oh=00_AfK9I3ykqrVVaJXuC-YE3QnR8H0bYLDwlovi6S2jkMFcvQ&oe=68408D52",
-      grade: "10th Grade",
+      name: "Dristi Majhi",
+
+      grade: "9th Grade",
     },
   },
   {
     id: "2",
-    title: "Sustainability in Action: Our School's Green Revolution",
-    slug: "sustainability-action-school-green-revolution",
-    excerpt:
-      "Join us on our journey to create a more sustainable campus. From solar panels to zero-waste initiatives, see how students are leading environmental change.",
-    content:
-      "Our school's commitment to sustainability goes beyond just talking about environmental issues – we're taking concrete action to create a greener, more sustainable campus. Over the past year, our student-led environmental committee has implemented numerous initiatives that have significantly reduced our carbon footprint.",
-    fullContent: `Our school's commitment to sustainability goes beyond just talking about environmental issues – we're taking concrete action to create a greener, more sustainable campus. Over the past year, our student-led environmental committee has implemented numerous initiatives that have significantly reduced our carbon footprint.
+    title: "Why It's Okay to be Different",
+    slug: "",
 
-## Solar Power Initiative
-
-The most visible change on our campus is the installation of solar panels on the main building's roof. This project, which was proposed and advocated for by students, now provides 40% of our school's electricity needs. The panels not only reduce our environmental impact but also serve as a real-world learning tool for our physics and environmental science classes.
-
-## Zero-Waste Cafeteria Program
-
-Our cafeteria has undergone a complete transformation. We've eliminated single-use plastics, implemented a comprehensive composting program, and partnered with local farms to source organic, locally-grown ingredients. Students now bring reusable containers, and any food waste is composted and used in our school garden.
-
-## Green Transportation
-
-We've launched a bike-to-school program that has reduced car traffic by 30%. The school installed secure bike racks and created safe cycling routes. Additionally, we've organized carpooling networks and advocated for better public transportation connections to our campus.
-
-## Campus Garden and Biodiversity
-
-Our school garden has become a centerpiece of our sustainability efforts. Students grow vegetables that are used in the cafeteria, and we've created habitats for local wildlife. The garden serves as an outdoor classroom where students learn about ecology, botany, and sustainable agriculture.
-
-## Energy Conservation
-
-Through student-led awareness campaigns, we've reduced our energy consumption by 25%. Simple actions like turning off lights, using natural lighting when possible, and optimizing heating and cooling systems have made a significant impact.
-
-## Student Leadership
-
-What makes our sustainability program special is that it's entirely student-driven. Our environmental committee meets weekly to plan new initiatives, monitor our progress, and educate the school community about environmental issues. We've proven that young people can be powerful agents of change.
-
-## Looking Forward
-
-Our next goals include achieving carbon neutrality by 2026, expanding our renewable energy capacity, and creating partnerships with other schools to share our sustainability model. We believe that environmental education and action should be at the heart of every school's mission.
-
-The green revolution at our school shows that sustainability isn't just about the future – it's about the actions we take today. Every student has the power to make a difference, and together, we're creating a more sustainable world.`,
+    content: `Have you even looked around and felt like you don't quite fit in? Maybe your hairstyle is different, your accent isn't the same, or you just think differently from others. I used to feel that way too like I had to be liked by everyone else to be accepted. But with time, I realized something important  being different isn't wrong- it's what makes us special.
+Think about it—if everyone looked, talked, and acted the same, life would be so boring. Our world is beautiful because it's full of different people, ideas and creatures. Each person brings something unique.
+Being different means you have your own story, your own voice and your own way of seeing the world. Maybe you've more creative, quite, funny or curious – that's your strength.
+In the End, our differences are not something to be ashamed of—they are what make the world shine a little brighter.
+`,
+    fullContent: ``,
     coverImage:
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=600&fit=crop",
-    date: "April 28, 2024",
+      "https://www.emp-online.com/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dw91127bc6/images/4/5/1/1/451151d.jpg?sfrm=png",
+    date: "April 28, 2025",
     readTime: "6 min read",
     featured: true,
     categories: ["Environment", "Student Projects", "Sustainability"],
     author: {
-      name: "Soniya Subba",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-      grade: "11th Grade",
+      name: "Salina Rai",
+
+      grade: "9th Grade",
     },
   },
   {
     id: "3",
     title: "The Science of Memory: Unlocking Better Study Techniques",
     slug: "science-memory-unlocking-study-techniques",
-    excerpt:
-      "Explore neuroscience-backed strategies that can transform your learning experience and boost academic performance.",
+
     content:
       "Understanding how memory works can revolutionize your study habits and academic performance.",
     fullContent:
       "Understanding how memory works can revolutionize your study habits and academic performance. Through neuroscience research, we now know specific techniques that can dramatically improve retention and recall.",
     coverImage:
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
-    date: "April 10, 2024",
+    date: "April 10, 2025",
     readTime: "7 min read",
     featured: false,
     categories: ["Academic", "Psychology", "Study Tips"],
     author: {
       name: "Krishna Raut",
-      avatar:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+
       grade: "7th Grade",
     },
   },
@@ -157,8 +105,7 @@ The green revolution at our school shows that sustainability isn't just about th
     id: "4",
     title: "Championship Dreams: Our Basketball Team's Inspiring Journey",
     slug: "championship-dreams-basketball-team-journey",
-    excerpt:
-      "Follow our team's incredible path to victory, filled with challenges, teamwork, and unforgettable moments.",
+
     content:
       "Our basketball team's journey to the state championship was filled with challenges, growth, and incredible teamwork.",
     fullContent:
@@ -171,8 +118,7 @@ The green revolution at our school shows that sustainability isn't just about th
     categories: ["Sports", "School Events", "Teamwork"],
     author: {
       name: "James Rodriguez",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+
       grade: "12th Grade",
     },
   },
@@ -180,8 +126,7 @@ The green revolution at our school shows that sustainability isn't just about th
     id: "5",
     title: "Digital Storytelling: The Evolution of Student Journalism",
     slug: "digital-storytelling-evolution-student-journalism",
-    excerpt:
-      "How modern technology is empowering student voices and creating new opportunities for authentic storytelling.",
+
     content:
       "Student journalism is evolving rapidly with new digital tools and platforms.",
     fullContent:
@@ -194,8 +139,7 @@ The green revolution at our school shows that sustainability isn't just about th
     categories: ["Journalism", "Technology", "Media"],
     author: {
       name: "Aisha Patel",
-      avatar:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+
       grade: "11th Grade",
     },
   },
@@ -203,8 +147,7 @@ The green revolution at our school shows that sustainability isn't just about th
     id: "6",
     title: "Art as Identity: Celebrating Cultural Diversity Through Creativity",
     slug: "art-identity-celebrating-cultural-diversity",
-    excerpt:
-      "Our multicultural art exhibition showcases the beautiful tapestry of student heritage and creative expression.",
+
     content:
       "Art has always been a powerful medium for expressing identity and culture.",
     fullContent:
@@ -217,8 +160,7 @@ The green revolution at our school shows that sustainability isn't just about th
     categories: ["Arts", "Culture", "Diversity"],
     author: {
       name: "David Kim",
-      avatar:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+
       grade: "9th Grade",
     },
   },
@@ -454,10 +396,6 @@ const FeaturedBlogCard: React.FC<{
           {post.title}
         </h3>
 
-        <p className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
-          {post.excerpt}
-        </p>
-
         <div className="flex items-center gap-6 mb-6">
           <div className="flex items-center text-sm text-gray-500">
             <Calendar className="h-4 w-4 mr-2" />
@@ -502,13 +440,7 @@ const FeaturedBlogCard: React.FC<{
         {/* Author Section */}
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex items-center gap-4">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden ring-4 ring-green-200">
-              <img
-                src={post.author.avatar || "/placeholder.svg"}
-                alt={post.author.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <div className="relative w-12 h-12 rounded-full overflow-hidden ring-4 ring-green-200"></div>
             <div>
               <p className="font-semibold text-gray-900">{post.author.name}</p>
               {post.author.grade && (
@@ -588,19 +520,9 @@ const BlogCard: React.FC<{ post: BlogPost; index: number }> = ({
             {post.title}
           </h3>
 
-          <p className="text-gray-600 line-clamp-3 mb-6 flex-grow leading-relaxed">
-            {post.excerpt}
-          </p>
-
           <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
             <div className="flex items-center gap-3">
-              <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-green-100">
-                <img
-                  src={post.author.avatar || "/placeholder.svg"}
-                  alt={post.author.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-green-100"></div>
               <span className="text-sm font-medium text-gray-700">
                 {post.author.name}
               </span>
