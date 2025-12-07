@@ -8,7 +8,7 @@ import Pic3 from "../SchoolPics/Teachers/BarshaMiss.jpg";
 import Pic4 from "../SchoolPics/Teachers/KhemSir.jpg";
 import Pic5 from "../SchoolPics/Teachers/GitaRamSir.jpg";
 import Pic6 from "../SchoolPics/Teachers/Madan.png";
-import Pic7 from "../SchoolPics/Teachers/dipjalSir.jpg";
+
 import Pic8 from "../SchoolPics/Teachers/RupeshSir.jpg";
 import Pic9 from "../SchoolPics/Teachers/kamalSir.jpg";
 import Pic10 from "../SchoolPics/Teachers/Prakash.png";
